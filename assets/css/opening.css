@@ -1,0 +1,77 @@
+  /* line */
+.line {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  border-bottom: solid 5px #f56a6a;
+  padding: 1.5em 0 1em 0;
+  position: relative; }
+  .line > * {
+    -moz-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-bottom: 0; }
+
+  @media screen and (max-width: 1680px) {
+    .line {
+      padding-top: 2em; } }
+  @media screen and (max-width: 736px) {
+    .line {
+      padding-top: 2em; }
+      .logo {
+        font-size: 1.25em;
+        margin: 0; }}
+.box {
+    background: rgba(255,255,255,0.2);
+    border-bottom: solid 1px #ccc;
+    padding: 0em 1.75em 2.75em 1.75em;
+}
+
+.line > p{
+  font-size:30px;
+    font-weight:500;
+    line-height:1.1;
+    color: #000
+}
+.line > p > strong{
+  color: #f15a23
+}
+.box > header {
+    margin: 1em 0 0em 0;
+  }
+.box > header > p {
+      display: block;
+      font-style: italic;
+      margin: 0.5em 0 0 0;
+      padding-bottom: 0.5em;
+    }
+.box > header > a{
+  color:#CD5C5C;
+  font-size: 18px;
+  text-decoration: none;
+}
+.box > header > hr {
+    border: 0;
+    border-top: solid 1px #dddddd;
+    height: 1px;
+    margin: 0em 0 0.5em 0;
+  }
+  .each-teacher > p > strong{
+    font-size: 18px;
+  }
+.each-teacher > p{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.each-teacher ul > li{
+    list-style-type: square;
+}
+.each-teacher ul > li::marker{
+
+  color: #CD5C5C;
+}
+.box{
+  border: 1px solid #dddddd;
+}

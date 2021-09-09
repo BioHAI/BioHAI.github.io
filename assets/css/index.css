@@ -1,0 +1,32 @@
+.drugAI >img{
+	width: 12em;
+	height: 10em;
+
+	/*margin-left: 10em;
+	margin-right: 0;*/
+}
+.box > a {
+		
+	text-align: center;
+	vertical-align: middle;
+	color: red;
+	width: 100%;
+	margin:0;
+}
+.box-self{
+	padding: 0 3em 4em 3em;
+}
+.drugAI-header{
+	margin: 0 0 0.5em 0;
+}
+.research_direction > img{
+	width: 12em;
+	height: 8em;
+	margin-top: 2em;
+}
+.box-header > h3{
+	font-size: 1em;
+}
+.main-self{
+	padding-bottom: 0;
+}
