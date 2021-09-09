@@ -24,10 +24,14 @@
         font-size: 1.25em;
         margin: 0; }}
 .box {
-    background: rgba(254,219,207,0.2);
+    /* background: rgba(255,255,255,0.2); */
+	background:#f7f5ec;
     border-bottom: solid 1px #ccc;
     padding: 0em 1.75em 2.75em 1.75em;
 }
+.box{
+	border: 1px solid #dddddd;
+  }
 
 .line > p{
 	font-size:30px;
@@ -63,8 +67,8 @@
 	height: 75px;
 }
 .paper-right{
-	width: 93%;
-	float: left;
+	width: 90%;
+	float: right;
 	height: 75px;
 }
 .paper-right ul{
@@ -75,7 +79,8 @@
 	line-height:20px;
 }
 .paper-right p{
-	font-size: 14px
+	font-size: 15px;
+	font-weight: normal;
 }
 
 .paper-section header{
@@ -84,7 +89,7 @@
 }
 .paper-block{
 	width:100%;
-	height:75px;
+	height:80px;
 	margin-bottom: 0.5em;
 }
 .more-list > li > a{

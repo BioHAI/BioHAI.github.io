@@ -24,7 +24,8 @@
         font-size: 1.25em;
         margin: 0; }}
 .box {
-    background: rgba(255,255,255,0.2);
+    /* background: rgba(255,255,255,0.2); */
+    background: #f7f5ec;
     border-bottom: solid 1px #ccc;
     padding: 0em 1.75em 2.75em 1.75em;
 }
@@ -52,6 +53,23 @@
   font-size: 18px;
   text-decoration: none;
 }
+.adm-note{
+  font-size: 16px;
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  font-weight: normal;
+  /* font-weight: 600; */
+  color: #666666;
+}
+.adm-note li{
+  
+  list-style-type: square;
+}
+.adm-note li::marker{
+
+  color: #CD5C5C;
+}
+
 .box > header > hr {
     border: 0;
     border-top: solid 1px #dddddd;
