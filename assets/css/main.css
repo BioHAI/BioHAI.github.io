@@ -102,7 +102,6 @@ input, select, textarea {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #5d5d5d;
-		background: #f7f7f7 url("images/bg02.png");
 		font-size: 14pt;
 		line-height: 1.75em;
 	}
@@ -318,7 +317,7 @@ input, select, textarea {
 		}
 
 		.row > .col-8 {
-			width: 100%;
+			width: 66.66667%;
 		}
 
 		.row > .off-8 {
@@ -1498,7 +1497,7 @@ input, select, textarea {
 
 /* Tables */
 
-	/*table {
+	table {
 		width: 100%;
 	}
 
@@ -1523,7 +1522,7 @@ input, select, textarea {
 
 		table thead {
 			border-bottom: solid 2px #dddddd;
-		}*/
+		}
 
 /* Section/Article */
 
@@ -1564,7 +1563,7 @@ input, select, textarea {
 			}
 
 	footer {
-		margin: 0 0 0 0;
+		margin: 2.25em 0 0 0;
 	}
 
 /* Box */
@@ -1580,45 +1579,22 @@ input, select, textarea {
 			width: auto;
 			left: 1.75em;
 			top: 1.75em;
-			margin: -2em 0 2em -3.5em;
-		}
-		/*.box img{
-			width: 100%;
-			height: 8em;
-		}*/
-		.box-header{
-			width：auto; 
-			height: 8em;
-			padding-top: 1em;
-			margin: 0 0 0em 0;
+			margin: -4.5em 0 4.25em -3.5em;
 		}
 
-		/*.box.post header {
-			width：auto; 
-			height: 20em;
+		.box.post header {
 			padding-top: 1em;
 			margin: 0 0 2em 0;
-		}*/
+		}
 
 		.box.post h2 {
-			font-size: 1em;
+			font-size: 2.5em;
 			letter-spacing: -0.015em;
 		}
-		/*.box.post h3 {
-			text-align: center;
-			font-size: 1em;
-			letter-spacing: -0.015em;
-		}*/
 
-		/*.box.post header > p {
-			width：auto; 
+		.box.post header > p {
+			margin-top: 1.25em;
 			font-size: 1.25em;
-			margin-bottom: 0;
-		}*/
-		.box-p{
-			width：auto; 
-			font-size: 1em;
-			margin-bottom: 1em;
 		}
 
 		.box footer ul.actions {
@@ -2092,7 +2068,7 @@ input, select, textarea {
 		position: relative;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 5em 0 1em 0;
+		padding: 5em 0 4em 0;
 		text-align: center;
 	}
 
@@ -2197,9 +2173,9 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/index01.jpg");
+		background: #CCE8F4 url("../../images/pic01.jpg");
 		background-position: center center;
-		background-size: 100% 100%;
+		background-size: auto 100%;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
@@ -2208,7 +2184,7 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.8);
+			background-color: rgba(34, 30, 31, 0.98);
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
@@ -2216,14 +2192,13 @@ input, select, textarea {
 
 			#banner header h2 {
 				color: #fff;
-				font-weight: 500;
+				font-weight: 700;
 				font-size: 2.5em;
 				margin: 0 0 0.65em 0;
 			}
 
 			#banner header p {
-				color: #FFF;
-
+				color: #d52349;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
@@ -2316,24 +2291,47 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		color: #858484;
-		padding: 0 0;
-		margin-bottom: 0;
+		padding: 4em 0;
 	}
 
-    .container {
-        margin-right:auto;
-        margin-left:auto;
-        padding-left:15px;
-        padding-right:15px
-    }
-    .row {
-        margin-left:-15px;
-        margin-right:-15px
-    }
-    .text-center {
-    	margin-bottom: 1em;
-        text-align:center
-    }
+		#footer:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url("images/bg01.png");
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.5;
+		}
+
+		#footer a {
+			color: #c5c4c4;
+		}
+
+		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
+			color: #fff;
+		}
+
+			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
+				color: inherit;
+			}
+
+		#footer ul.contact li,
+		#footer ul.dates li,
+		#footer ul.divided li {
+			border-top-color: #353434;
+			border-top-color: rgba(255, 255, 255, 0.05);
+		}
+
+		#footer header {
+			margin: 0 0 3em 0;
+		}
+
+			#footer header h2 {
+				font-size: 1.75em;
+			}
 
 /* Copyright */
 
@@ -2909,18 +2907,7 @@ input, select, textarea {
 
 	}
 
-	/*.absolute { 
-		position: absolute; 
-	}*/
-    /*.erweima {
-    	background-color: rgba(1,1,1,0.5);
-    	width:2000;
-    	height: 500;
-    	padding: 10em 0 10em 0;
-    	margin: 0 0 0 0;
-
-    }*/
-    .ewm-img{
+	.ewm-img{
     	text-align:center;
     }
 
