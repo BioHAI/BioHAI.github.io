@@ -271,3 +271,14 @@
 .panel-self > h3 > strong{
     color: #f15a23
 }
+.text-center{
+    text-align: center;
+}
+#footer{
+    margin-bottom: 0;
+    background: white;
+    padding:1em 0 1em 0;
+}
+#footer .text-center > a{
+    color: #d52349;
+}

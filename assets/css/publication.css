@@ -106,3 +106,14 @@
 .paper-right > ul{
 	margin-bottom: 0em;
 }
+.text-center{
+    text-align: center;
+}
+#footer{
+    margin-bottom: 0;
+    background: white;
+    padding:1em 0 1em 0;
+}
+#footer .text-center > a{
+    color: #d52349;
+}
