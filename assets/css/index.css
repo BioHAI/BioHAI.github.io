@@ -156,10 +156,14 @@ ul.actions li{
 .col-4{
 	text-align: center;
 }
-.row > .col-6 {
+/*.row > .col-6 {
     width: 40%;
     padding: 50px 0 0 0;
+    text-align: center;
+    display: inline-block;
 }
 .row-major{
+    display: inline-block;
     text-align: center;
-}
+    width: 100%;
+}*/
