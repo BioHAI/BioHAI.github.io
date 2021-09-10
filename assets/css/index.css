@@ -30,3 +30,88 @@
 .main-self{
 	padding-bottom: 0;
 }
+.ewm-img{
+    	text-align:center;
+    }
+
+    .modal-content {
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 15em;
+    width: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius:0 10px 10px 0;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+.modal-dialog {
+	position: relative;
+    width: auto;
+    margin: 100px auto;
+
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.fade.in {
+    opacity: 1;
+}
+.modal {
+	background-color: (0,0,0,1);
+	display: block;
+    padding-right: 21px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.Research-p{
+	text-align: left;
+}
+
+#Research-img{
+	margin-top: -4.5em;
+}
+.row-index.col-4{
+	padding-left:25px;
+}
+.row-index{
+	padding: 50px 0 0 0;
+}
+.col-12-indexrow{
+	padding: 50px 25px 0 25px
+}
