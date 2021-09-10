@@ -14,7 +14,8 @@
 	margin:0;
 }
 .box-self{
-	padding: 0 3em 4em 3em;
+	padding: 0 2em 4em 2em;
+	text-align: center;
 }
 .drugAI-header{
 	margin: 0 0 0.5em 0;
@@ -125,4 +126,29 @@
 }
 #footer .text-center > a{
     color: #d52349;
+}
+#header{
+	padding: 5em 0 0 0;
+}
+#banner{
+	background: #CCE8F4 url("../../images/index01.jpg");
+	background-size: 100%;
+	background-repeat:no-repeat;
+}
+#banner header p{
+	font-color: white;
+}
+.row{
+	margin-left: 0;
+}
+.drugAI-img{
+	margin:0;
+	text-align: center;
+}
+ul.actions li{
+	/*display: inline-block;*/
+	margin-left: 0.5em;
+}
+.col-4{
+	text-align: center;
 }
