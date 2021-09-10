@@ -1,6 +1,6 @@
 .drugAI >img{
-	width: 12em;
-	height: 10em;
+	width: 50%;
+	height: 8em;
 
 	/*margin-left: 10em;
 	margin-right: 0;*/
@@ -20,10 +20,14 @@
 .drugAI-header{
 	margin: 0 0 0.5em 0;
 }
+.drugAI >img{
+    margin-top: 1em;
+}
+
 .research_direction > img{
-	width: 12em;
+	width: 50%;
 	height: 8em;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 .box-header > h3{
 	font-size: 1em;
@@ -114,7 +118,7 @@
 	padding: 50px 0 0 0;
 }
 .col-12-indexrow{
-	padding: 50px 25px 0 25px
+	padding: 50px 25px 0 25px;
 }
 .text-center{
     text-align: center;
@@ -132,7 +136,7 @@
 }
 #banner{
 	background: #CCE8F4 url("../../images/index01.jpg");
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-repeat:no-repeat;
 }
 #banner header p{
@@ -151,4 +155,11 @@ ul.actions li{
 }
 .col-4{
 	text-align: center;
+}
+.row > .col-6 {
+    width: 40%;
+    padding: 50px 0 0 0;
+}
+.row-major{
+    text-align: center;
 }
