@@ -1,0 +1,81 @@
+#page {
+    background-color: #f7f5ec;
+    width: 60%;
+    margin: 24px auto;
+    padding: 12px;
+}
+div {
+    display: block;
+}
+body {
+    color: #444444;
+    background-color: #EEEEEE;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 80%;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+#header {
+    padding: 6px;
+    text-align: center;
+}
+.status4xx {
+    background:#f56a6a;
+    color: #FFFFFF;
+}
+#content {
+    padding: 4px 0 24px 0;
+}
+/* p {
+    font-size:  16px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+} */
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table {
+    /* border:1px solid #F00; */
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 10px;
+    border-color: grey;
+}
+
+tr {
+    /* border:1px solid #F00; */
+    display: table-row;
+    /* vertical-align: inherit;
+    border-color: inherit; */
+    margin: 0;
+
+}
+td {
+    font-size:  16px;
+    /* border:1px solid #F00; */
+    display: table-cell;
+    vertical-align: inherit;
+
+}
+.font9{
+    font-size: 16px;
+}
