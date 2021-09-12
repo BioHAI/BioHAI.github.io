@@ -295,3 +295,7 @@
 .biyexuesheng{
     width: 100%;
 }
+.biyexuesheng > a{
+        word-wrap:break-word; 
+        word-break:break-all; 
+}
