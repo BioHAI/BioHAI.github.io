@@ -32,6 +32,9 @@
 .box-header > h3{
 	font-size: 1em;
 }
+.box-header-l2 > h3{
+    height: 5.5em;
+}
 .main-self{
 	padding-bottom: 0;
 }
