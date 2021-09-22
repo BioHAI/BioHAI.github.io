@@ -1,5 +1,6 @@
 .box-pub {
     background: rgba(255,255,255);
+    border-top: solid 1px  #ccc;
     border-left: solid 1px  #ccc;
     border-right: solid 1px  #ccc;
     border-bottom: solid 1px  #ccc;
@@ -21,8 +22,8 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    /* border-bottom: solid 5px #f56a6a; */
-    padding: 3em 0 1em 0;
+    border-bottom: solid 5px #f56a6a;
+    padding: 1.5em 0 1em 0;
     position: relative; }
     .line > * {
       -moz-flex: 1;
@@ -40,14 +41,15 @@
         .logo {
           font-size: 1.25em;
           margin: 0; }}
-          .line > p{
-	font-size:30px;
+
+.line > p{
+  font-size:30px;
     font-weight:500;
     line-height:1.1;
     color: #000
 }
 .line > p > strong{
-	color: #f15a23
+  color: #f15a23
 }
 .panel {
 /*    background-color: black;*/

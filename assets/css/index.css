@@ -1,6 +1,6 @@
 .drugAI >img{
-	width: 50%;
-	height: 8em;
+	width: 100%;
+	height:7em;
 
 	/*margin-left: 10em;
 	margin-right: 0;*/
@@ -14,7 +14,7 @@
 	margin:0;
 }
 .box-self{
-	padding: 0 2em 4em 2em;
+	padding: 0 1em 1em 1em;
 	text-align: center;
 }
 .drugAI-header{
@@ -156,17 +156,26 @@ ul.actions li{
 	/*display: inline-block;*/
 	margin-left: 0.5em;
 }
+.news{
+    text-align:left;
+    font-size:16px;
+
+}
+.news li{
+    list-style-type:none;
+}
 .col-4{
 	text-align: center;
 }
-/*.row > .col-6 {
-    width: 40%;
+.row > .col-666 {
+    width: 100%;
     padding: 50px 0 0 0;
     text-align: center;
     display: inline-block;
 }
-.row-major{
+
+/* .row-major{
     display: inline-block;
     text-align: center;
     width: 100%;
-}*/
+} */

@@ -121,6 +121,17 @@
 	color:black;
 	margin-bottom: 0px;
 }
+.each-research4{
+	padding-left: 20px;
+	margin-top: 10px;
+	border-left: 4px solid red;
+	background: rgb(245,255,250,0.2);
+
+}
+.each-research4 > p{
+	color:black;
+	margin-bottom: 0px;
+}
 .text-center{
     text-align: center;
 }

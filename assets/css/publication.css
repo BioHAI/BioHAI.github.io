@@ -51,16 +51,25 @@
 			margin: 0.5em 0 0 0;
 			padding-bottom: 0.5em;
 		}
+		hr {
+			display: block;
+			unicode-bidi: isolate;
+			margin-block-start: 0.5em;
+			margin-block-end: 0.5em;
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+			overflow: hidden;
+		}
 .box > header > a{
 	color:#CD5C5C;
 	text-decoration: none;
 }
 .box > header > hr {
-		border: 0;
-		border-top: solid 1px #dddddd;
-		height: 1px;
-		margin: 0em 0 0.5em 0;
-	}
+    border: 0;
+    border-top: solid 1px #dddddd;
+    height: 1px;
+    margin: 0em 0 0.5em 0;
+  }
 .paper-left{
 	width: 4em;
 	float: left;
