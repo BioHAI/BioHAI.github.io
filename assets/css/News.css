@@ -349,11 +349,11 @@
     height: 30px;
     color: #000;
     padding-top: 10px;
-    margin-top: 10px;
+    margin-top: 1em;
 }
 .card-body {
     margin-top: 20px;
-    height: 13em;
+    height: 14em;
 }
 .card-body img {
     /*border-radius: 5px;*/
