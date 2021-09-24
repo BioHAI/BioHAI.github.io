@@ -467,5 +467,10 @@
     overflow: hidden;
 
 }
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0.5em 0.5em;
+}
 
         }
