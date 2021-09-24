@@ -410,6 +410,11 @@
 	border-right: 1px solid #ecebeb;
 	border-radius: 5px;
 }
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0.5em 1em;
+}
 #about-xueshu, #about-life{
 	display: none;
 }
