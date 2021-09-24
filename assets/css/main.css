@@ -1618,7 +1618,7 @@ input, select, textarea {
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
-		font-size: 9px;
+		font-size: 1.1em;
 		padding: 0.65em 1.5em 0.65em 1.5em;
 		text-align: center;
 		-moz-transition: background-color .25s ease-in-out;

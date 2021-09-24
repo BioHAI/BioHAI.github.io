@@ -6,117 +6,200 @@
 -->
 <html>
 	<head>
-		<title>Bioinformatics And Health AI （BIHAI）</title>
+		<!-- <title>Bioinformatics And Health AI （BIHAI）</title> -->
+		<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI4health@HUN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/News.css" />
+
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
-    <body class="homepage is-preload">
+	<body class="right-sidebar is-preload">
+	<!-- <body class="left-sidebar is-preload"> -->
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html">Bioinformatics And Health AI （BIHAI）</a></h1>
+						<h1><a href="index.html"><img src="images/title.png"></a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li><a href="People.html">People</a></li>
+								<li ><a href="People.html">People</a></li>
 								<li class="current"><a href="News.html">News</a></li>
 								<li><a href="Publication.html">Publication</a></li>
 								<li><a href="Research.html">Research</a></li>
 								<li><a href="Openings.html">Openings</a></li>
+							
 
 							</ul>
 						</nav>
-                </section>
-                <!-- Main -->
-                <section id="main" style="padding-bottom:2em;">
+
+				</section>
+
+			<!-- Main -->
+				<section id="main" style="padding-bottom: 2em">
 					<div class="container">
-                        <div class="row">
-                        <!-- Content -->
-                        <article class="box post box-pub "style="width: 100%" >
-                           <div class = 'line'>
-										<p><strong>新闻资讯</strong> News</p>
-								</div>
+						<div class="row" id = "row-self">
+								<article class="box post box-pub" style="">		
+									
+									<div class = 'line'>
+										<p><strong>新闻</strong>&nbsp;&nbsp;News</p>
+									</div>
 
-                            <section class = "news-section" style="margin-bottom: 0em">
-                                <br>
-                            <div class = "news-block">
-                                <div class = "news-left">
-                                    <a target="_blank"><img  src="images/news/news1.png" ></a>
-                                </div>
-                                <div class = "news-right">
-                                    <ul style="list-style:none;">
-                                        <li><span class="date">[2021-8-21]</span> </li> 
-                                        <li> <p><strong>实验室学生程玉的paper《Deep learning methods for biomedical named entity recognition: a survey and qualitative comparison》被Briefings in Bioinformatics接收，祝贺！</strong></p></li> 
-                                          
-                                                </ul>
-                                </div>
-                            </div>
-                            <div class = "news-block">
-                                <div class = "news-left">
-                                    <a target="_blank"><img  src="images/news/news2.png" ></a>
-                                </div>
-                                <div class = "news-right">
-                                    <ul style="list-style:none;">
-                                        <li><span class="date">[2021-7-23]</span> </li>  
-                                        <li> <p><strong>实验室学生李芬的paper《Deep learning methods for biomedical named entity recognition: a survey and qualitative comparison》被Briefings in Bioinformatics接收，祝贺！</strong></p></li> 
-                                        
-                                                </ul>
-                                </div>
-                            </div>
-                            <div class = "news-block">
-                                <div class = "news-left">
-                                    <a target="_blank"><img  src="images/news/firstAIdrug.jpg" ></a>
-                                </div>
-                                <div class = "news-right">
-                                    <ul style="list-style:none;">
-                                        <li><span class="date">[2021-7-16]</span> </li> 
-                                        <li> <p><strong>BIHAI课题组前往上海参加了为期2天的“首届AI药物研发创新研讨会”
-                                            本届大会由中国健康传媒集团指导，《中国食品药品监管》杂志社主办，大会围绕“AI助力医药研发创新”展开了深入而广泛的交流。</strong></p></li> 
-                                                </ul>
-                                </div>
-                            </div>
-                            
-                            
-                        </section>
-                        </article>
-                    </div>
-                    </div>
-                </section>
-                
-                
-        </div>
-        <!-- Footer -->
-		<section id="footer">
-			<div id="footer_copy">
-				<div class="container"><hr/>
-				<div>
-					<p class="text-center">
-						<a href="http://csee.hnu.edu.cn/" target="_blank">College of Computer and Electronic Engineering | Hunan University</a>
-					</p>
-				</div>
-				<div>
-					<p class="text-center">Computer and Electronic Engineering Building, Hunan University, Changsha, China, 410082<br />Copyright © Bioinformatics And Health AI Group @ Hunan University. Adapted from HTML5 UP</p>
-				</div>
-			</div>
-		</section>
+									<ul class="nav nav-tabs">
+										<li class="active"><a href="#lunwen">论文动态</a></li>
+										<li ><a href="#xueshu">学术活动</a></li>
+										<li><a href="#shenghuo">生活娱乐</a></li>
+									</ul>
+										
+									<!-- <div class = "section-title" >	
+											<p><strong>学术新闻</strong></p>	
+									</div>
+									<div class="heading_border"></div> -->
+										<div class="demo">
+											<div class="container list" id = "about-paper">
+												<div class="row row-people">
 
+													<div class="col-md-3 col-sm-6 hover">
+														
+														<div class="">
+															<div class="card-head">[2021-8-21]</div>
+
+															<div class="card-body"><a target="_blank"><img  src="images/news/news1.png" alt="image"></a>
+															</div>
+															<div class="card-tag">论文接收</div>
+															<div class="card-foot">
+																<div class="item-content">
+																	程玉同学的论文《Deep learning methods for biomedical named entity recognition: a survey and qualitative comparison》 被“Briefings in Bioinformatics”接收，祝贺！
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-3 col-sm-6 hover">
+														
+														<div class="">
+															<div class="card-head">[2021-7-23]</div>
+
+															<div class="card-body"><a target="_blank"><img  src="images/news/news2.png" alt="image"></a>
+															</div>
+															<div class="card-tag">论文接收</div>
+															<div class="card-foot">
+																<div class="item-content">
+																	李芬同学的论文《Deep learning methods for biomedical named entity recognition: a survey and qualitative comparison》被“Briefings in Bioinformatics”接收，祝贺！
+																</div>
+															</div>
+														</div>
+													</div>
+													
+
+												</div>
+											</div>
+
+											<div class="container list" id = "about-xueshu">
+												<div class="row row-people">
+
+													<div class="col-md-3 col-sm-6 hover">
+														
+														<div class="">
+															<div class="card-head">[2021-7-16]</div>
+
+															<div class="card-body"><a target="_blank"><img  src="images/news/firstAIdrug.jpg" alt="image"></a>
+															</div>
+															<div class="card-tag">首届AI药物研发创新研讨会</div>
+															<div class="card-foot">
+																<div class="item-content">
+																	BIHAI课题组前往上海参加了为期2天的“首届AI药物研发创新研讨会”。本届大会由中国健康传媒集团指导，《中国食品药品监管》杂志社主办。大会围绕“AI助力医药研发创新”展开了深入且广泛的交流。
+																</div>
+															</div>
+														</div>
+													</div>
+													
+
+												</div>
+											</div>
+
+											<div class="container list" id = "about-life">
+												<div class="row row-people">
+
+													<div class="col-md-3 col-sm-6 hover">
+														
+														<div class="">
+															<div class="card-head">[2021-01]</div>
+
+															<div class="card-body"><a target="_blank"><img  src="images/news/juhui_2021-01.jpg" alt="image"></a>
+															</div>
+															<div class="card-tag">课题组聚餐</div>
+															<!-- <div class="card-foot">
+																<div class="item-content">
+																	
+																</div>
+															</div> -->
+														</div>
+													</div>
+													
+
+												</div>
+											</div>
+
+										</div>
+								</article>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div id="footer_copy">
+						<div class="container"><hr/>
+						<div>
+							<p class="text-center">
+								<a href="http://csee.hnu.edu.cn/" target="_blank">College of Computer and Electronic Engineering | Hunan University</a>
+							</p>
+						</div>
+						<div>
+							<p class="text-center">Computer and Electronic Engineering Building, Hunan University, Changsha, China, 410082<br />Copyright © Bioinfirmatics And Health AI Group @ Hunan University. Adapted from HTML5 UP</p>
+						</div>
+					</div>
+				</section>
+					</div>
+				</section>
 
 		<!-- Scripts -->
+		<script>
+								$(function(){
+									//获取点击事件的对象
+									$(".nav li").click(function(){
+										//获取要显示或隐藏的对象
+										var divShow = $(".demo").children('.list');
+										//判断当前对象是否被选中，如果没选中的话进入if
+										if (!$(this).hasClass('active')) {
+											//获取当前对象的索引
+											var index = $(this).index();
+											//当前对象添加选中样式并且其同胞移除选中样式；
+											$(this).addClass('active').siblings('li').removeClass('active');
+											//索引对应的div块显示
+											$(divShow[index]).show();
+											//索引对应的div块的同胞隐藏
+											$(divShow[index]).siblings('.list').hide();
+										}
+									});
+								});
+								
+						</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-    
 
-        </body>
-
+	</body>
 </html>

@@ -104,3 +104,7 @@
 #footer .text-center > a{
     color: #d52349;
 }
+#main{
+  padding-bottom: 2em;
+  padding-top: 2em;
+}

@@ -4,7 +4,7 @@
     border-left: solid 1px  #ccc;
     border-right: solid 1px  #ccc;
     border-bottom: solid 1px  #ccc;
-    padding: 0px 15px 20px 15px;
+    padding: 0em 1.75em 2.75em 1.75em;
     background:#f7f5ec;
     width: 100%;
 }
@@ -104,12 +104,12 @@
 }*/
 .section-title{
 	padding-bottom: 5px;
-	padding-left: 15px;
-	margin-top:30px;
-	border-bottom:3px solid;
+	padding-left: 0px;
+	margin-top:50px;
+	/*border-bottom:3px solid;
 	border-image: -webkit-linear-gradient(to right,#f15a23,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0 )10;
      border-image: -moz-linear-gradient(to right,#f15a23,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0 )10;
-     border-image: linear-gradient(to right,#f15a23,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0 )10;
+     border-image: linear-gradient(to right,#f15a23,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0,#C0C0C0 )10;*/
 }
 .section-title > p{
 	font-size:25px;
@@ -138,6 +138,8 @@
 }
 
 .col-md-3 {
+    padding: 0;
+
     margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
@@ -145,13 +147,13 @@
     float:left;
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    height:20em;
+/*    padding-right: 15px;
+    padding-left: 15px;*/
+    height:23em;
 
 }
 .col-md-4 {
-    margin-top: 30px;
+    /*margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
     width: 14em;
@@ -160,7 +162,16 @@
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    height:23em;
+    height:23em;*/
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 14em;
+    float:left;
+    position: relative;
+    min-height: 1px;
+    height:26em;
 
 }
 .demo{
@@ -174,8 +185,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-
-
+    margin: 0;
 }
 .our-team .pic {
     display: inline-block;
@@ -202,6 +212,13 @@
 .our-team .team-content {
     margin-top: 10px;
     margin-bottom: 10px
+}
+.team-content-p{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 14px;
 }
 .social{
 	width: 100%;
@@ -300,4 +317,15 @@
 .biyexuesheng > a{
         word-wrap:break-word; 
         word-break:break-all; 
+}
+.col-md-3-2{
+    height: 21em;
+}
+
+.heading_border {
+    border-left: 40px solid #f15a23;
+    height: 2px;
+    background-color: #efefef;
+    margin: 7px 0 16px 0;
+    width: 95%;
 }

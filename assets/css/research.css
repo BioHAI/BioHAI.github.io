@@ -121,17 +121,6 @@
 	color:black;
 	margin-bottom: 0px;
 }
-.each-research4{
-	padding-left: 20px;
-	margin-top: 10px;
-	border-left: 4px solid red;
-	background: rgb(245,255,250,0.2);
-
-}
-.each-research4 > p{
-	color:black;
-	margin-bottom: 0px;
-}
 .text-center{
     text-align: center;
 }
@@ -143,3 +132,32 @@
 #footer .text-center > a{
     color: #d52349;
 }
+
+.row{
+	margin-left: 0px;
+}
+.each-teacher2{
+	margin-top: 2em;
+}
+ .each-research4{
+	padding-left: 20px;
+	margin-top: 10px;
+	border-left: 4px solid rgba(184,134,11,0.6);
+	background: rgb(245,255,250,0.4);
+
+}
+.each-research4 > p{
+	color:black;
+	margin-bottom: 0px;
+}
+
+#main{
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.row{
+	margin-top: 0;
+}
+.box{
+	border: 1px solid #dddddd;
+  }
