@@ -142,8 +142,8 @@
 
     margin-top: 30px;
     margin-left: 15px;
-    margin-right: 15px;
-    width: 14em;
+    /*margin-right: 15px;*/
+    width: 15em;
     float:left;
     position: relative;
     min-height: 1px;
@@ -328,4 +328,7 @@
     background-color: #efefef;
     margin: 7px 0 16px 0;
     width: 95%;
+}
+#header img{
+    width:10em;
 }
