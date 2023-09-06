@@ -193,7 +193,7 @@
 						{
 							teacher_name:'刘元盛',
 							teacher_email:'yuanshengliu@hnu.edu.cn',
-							teacher_description:'助理教授，岳麓学者，悉尼科技大学博士',
+							teacher_description:'副教授，岳麓学者，悉尼科技大学博士',
 							teacher_image:'images/people/liuyuansheng.jpg',
 							teacher_index:'http://csee.hnu.edu.cn/people/liuyuansheng',
 							teacher_google:'https://xs.hkvisa.net/citations?user=H6yrNMQAAAAJ&hl=zh-CN&oi=ao'
@@ -220,8 +220,8 @@
 								<p class="team-content-p">{{visitor.visit_description}}</p>
 							</div>
 							<div class="social" align="center">
-								<a :href="visitor.visit_page" class="fa fa-link fa-self" target="_blank">&nbsp;&nbsp;个人主页</a>
-								<a :href="visitor.visit_google" target="_blank" class="fa fa-link fa-self">&nbsp;&nbsp;Google Scholar</a>
+								<a :href="visitor.visit_page" class="fa fa-link fa-self" target="_blank" v-if="visitor.visit_page!=''">&nbsp;&nbsp;个人主页</a>
+								<a :href="visitor.visit_google" target="_blank" class="fa fa-link fa-self" v-if="visitor.visit_google!=''">&nbsp;&nbsp;Google Scholar</a>
 							</div>
 						</div>
 					</div>
@@ -239,6 +239,51 @@
 							visit_image:'images/people/shijunfeng.jpg',
 							visit_page:'http://smyjy.hnu.edu.cn/info/1135/1227.htm',
 							visit_google: 'https://scholar.google.com.hk/citations?user=TV-FlRoAAAAJ&hl=zh-CN&oi=ao'
+						},
+						{
+							visit_name:'刘向荣',
+							visit_email:'xrliu@xmu.edu.cn',
+							visit_organization:'厦门大学教授',
+							visit_description:'计算机系主任',
+							visit_image:'images/people/liuxiangrong.jpg',
+							visit_page:'https://informatics.xmu.edu.cn/info/1018/3164.htm',
+							visit_google: 'https://scholar.google.com.hk/citations?user=FJKptroAAAAJ&hl=zh-CN&oi=ao'
+						},
+						{
+							visit_name:'魏乐义',
+							visit_email:'weileyi@sdu.edu.cn',
+							visit_organization:'山东大学教授',
+							visit_description:'',
+							visit_image:'images/people/weileyi.jpg',
+							visit_page:'https://sde.sdu.edu.cn/info/1006/1876.htm',
+							visit_google: 'https://scholar.google.com.hk/citations?user=0EAV03MAAAAJ&hl=zh-CN&oi=ao'
+						},
+						{
+							visit_name:'李春艳',
+							visit_email:'lchy0316@gmail.com',
+							visit_organization:'厦门大学',
+							visit_description:'',
+							visit_image:'images/people/lichunyan1.jpg',
+							visit_page:'',
+							visit_google: 'https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=AJsN-F668W-ZPt4Iw4oCw1ggbSThBW4w1rtp6wOWkdRyjB8jM3ny5_yWiG-x9GGbI0JDuszdIxIxPB0XJ8BXHn4Y24QbB7f_d2mQ2zf3kqblNREv5g1NOQI&user=dX2bJEMAAAAJ'
+						},
+						{
+							visit_name:'肖梦武',
+							visit_email:'mwxiao@hnu.edu.cn',
+							visit_organization:'湖南中医药大学',
+							visit_description:'',
+							visit_image:'images/people/xiaomengwu.jpg',
+							visit_page:'https://mwxiao.com',
+							visit_google: ''
+						},
+						{
+							visit_name:'林轩',
+							visit_email:'jack_lin@xtu.edu.cn',
+							visit_organization:'湘潭大学',
+							visit_description:'',
+							visit_image:'images/people/linxuan.jpg',
+							visit_page:'https://xuanlin1991.github.io/',
+							visit_google: 'https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en'
 						}
 					]
 				}

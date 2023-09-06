@@ -113,8 +113,8 @@
 											<p>{{paper.paper_authors}}
 												<br>
 												<strong>{{paper.paper_title}}</strong>
-												<a :href="paper.pdf_download" target="_blank">[pdf]</a>
-												<a :href="paper.code_download" target="_blank">[code]</a>
+												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
+												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
 												<br>
 												<i>{{paper.paper_publiation}}.</i>
 											</p>
@@ -138,14 +138,109 @@
 					paperInformation:{
 						'2023':[
 							{
-								image_target:'https://www.ijcai.org/proceedings/2020/380',
-								image_src:'images/papers/KGNN.jpg',
-								paper_authors: 'Xuan Lin, Zhe Quan*, Zhijie Wang*, Tengfei Ma, Xiangxiang Zeng.',
-								paper_title: 'KGNN: Knowledge Graph Neural Network for Drug-Drug Interaction Prediction.',
-								pdf_download:'https://www.ijcai.org/proceedings/2020/380',
-								code_download: 'https://github.com/xzenglab/KGNN',
-								paper_publiation: 'IJCAI2020'
+								image_target:'https://ojs.aaai.org/index.php/AAAI/article/view/25646',
+								image_src:'images/papers/2023/LagNet.png',
+								paper_authors: 'Chunyan Li, Junfeng Yao, Jinsong Su, Zhaoyang Liu, Xiangxiang Zeng, Chenxi Huang.',
+								paper_title: 'LagNet: Deep Lagrangian Mechanics for Plug-and-Play Molecular Representation Learning',
+								pdf_download:'https://ojs.aaai.org/index.php/AAAI/article/download/25646/25418',
+								code_download: '',
+								paper_publiation: 'Proceedings of the AAAI Conference on Artificial Intelligence'
+							},
+							{
+								image_target:'https://www.sciencedirect.com/science/article/abs/pii/S0304397523003419',
+								image_src:'images/papers/2023/Spiking.png',
+								paper_authors: 'Yanyan Li, Bosheng Song, Xiangxiang Zeng.',
+								paper_title: 'Spiking Neural P Systems with Weights and Delays on Synapses',
+								pdf_download:'',
+								code_download: '',
+								paper_publiation: 'Theoretical Computer Science'
+							},
+							{
+								image_target:'https://academic.oup.com/bib/article-abstract/24/3/bbad152/7135772?redirectedFrom=fulltext',
+								image_src:'images/papers/2023/Dimensionality.png',
+								paper_authors: 'Jing Jiang, Junlin Xu, Yuansheng Liu, Bosheng Song, Xiulan Guo, Xiangxiang Zeng, Quan Zou.',
+								paper_title: 'Dimensionality reduction and visualization of single-cell RNA-seq data with an improved deep variational autoencoder',
+								pdf_download:'',
+								code_download: '',
+								paper_publiation: 'Briefings in Bioinformatics'
+							},
+							{
+								image_target:'https://proceedings.mlr.press/v202/wu23d.html',
+								image_src:'images/papers/2023/2023ICML.png',
+								paper_authors: 'Bin Wu, Jinyuan Fang, Xiangxiang Zeng, Shangsong Liang, Qiang Zhang.',
+								paper_title: 'Adaptive Compositional Continual Meta-Learning',
+								pdf_download:'https://proceedings.mlr.press/v202/wu23d/wu23d.pdf',
+								code_download: '',
+								paper_publiation: 'International Conference on Machine Learning'
+							},
+							{
+								image_target:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.ijcai.org%2Fproceedings%2F2023%2F0549.pdf',
+								image_src:'images/papers/2023/IJCAI2023.png',
+								paper_authors: 'Xixi Yang, Li Fu, Yafeng Deng, Yuansheng Liu, Dongsheng Cao, Xiangxiang Zeng.',
+								paper_title: 'GPMO: Gradient perturbation-based contrastive learning for molecule Optimization ',
+								pdf_download:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.ijcai.org%2Fproceedings%2F2023%2F0549.pdf',
+								code_download: '',
+								paper_publiation: 'Proceedings of the Thirty-Second International Joint Conference on Artifici'
+							},
+							{
+								image_target:'',
+								image_src:'',
+								paper_authors: ' Peng Zhou, Zongqian Wu, Xiangxiang Zeng, Guoqiu Wen, Junbo Ma, Xiaofeng Zhu.',
+								paper_title: 'Totally Dynamic Hypergraph Neural Network.',
+								pdf_download:'',
+								code_download: '',
+								paper_publiation: 'Proceedings of the Thirty-Second International Joint Conference on Artifici'
+							},
+							{
+								image_target:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.cell.com%2Fcell-reports-methods%2Fpdf%2FS2667-2375(22)00287-9.pdf',
+								image_src:'images/papers/2023/Cell.png',
+								paper_authors: ' Junlin Xu, Jielin Xu, Yajie Meng, ...,\n' +
+										'Xiangxiang Zeng, Ruth Nussinov,\n' +
+										'Feixiong Cheng.',
+								paper_title: 'Graph embedding and Gaussian mixture variational autoencoder network for end-to-end analysis of single-cell RNA sequencing data.',
+								pdf_download:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.cell.com%2Fcell-reports-methods%2Fpdf%2FS2667-2375(22)00287-9.pdf',
+								code_download: '',
+								paper_publiation: 'Cell Reports Methods '
 							}
+						],
+						'2022':[
+							{
+								image_target:'https://www.nature.com/articles/s42256-022-00557-6',
+								image_src:'images/papers/2022/ImageMol.png',
+								paper_authors: ' Zeng, XiangxiangCheng, FeixiongNussinov, RuthWang, JianminLi, Kenli.',
+								paper_title: 'Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework.',
+								pdf_download:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.cell.com%2Fcell-reports-methods%2Fpdf%2FS2667-2375(22)00287-9.pdf',
+								code_download: '',
+								paper_publiation: 'Nature Machine Intelligence '
+							},
+							{
+								image_target:'https://linkinghub.elsevier.com/retrieve/pii/S2666379122003494',
+								image_src:'images/papers/2022/DeepGenerative.png',
+								paper_authors: ' Seung-gu KangEvandro F FangFeixiong ChengXiangxiang ZengJian Tang.',
+								paper_title: 'Deep generative molecular design reshapes drug discovery.',
+								pdf_download:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.cell.com%2Fcell-reports-medicine%2Fpdf%2FS2666-3791(22)00349-4.pdf',
+								code_download: '',
+								paper_publiation: 'Cell Reports Medicine '
+							},
+							{
+								image_target:'https://wires.onlinelibrary.wiley.com/doi/10.1002/wcms.1597',
+								image_src:'images/papers/2022/drugrepurposing.png',
+								paper_authors: ' Philip S YuFeixiong ChengDongsheng CaoXiangxiang ZengLifang He.',
+								paper_title: 'Deep learning for drug repurposing: Methods, databases, and applications.',
+								pdf_download:'',
+								code_download: '',
+								paper_publiation: 'Wiley Interdisciplinary Reviews: Computational Molecular Science'
+							},
+							{
+								image_target:'https://ieeexplore.ieee.org/abstract/document/9714718/',
+								image_src:'images/papers/2022/IEEE.png',
+								paper_authors: ' Zeng, XiangxiangNiu, ZhangmingWei, WeiWang, JianminLi, Chunyan.',
+								paper_title: 'Geometry-based molecular generation with deep constrained variational autoencoder.',
+								pdf_download:'https://drive.google.com/file/d/1YjNOID8-4iHwKwfZIZ9lX0e8CKzuDpQ9/view',
+								code_download: '',
+								paper_publiation: 'IEEE Transactions on Neural Networks and Learning Systems'
+							}
+
 						]
 					}
 				},
