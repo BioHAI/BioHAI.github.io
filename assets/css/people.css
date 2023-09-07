@@ -189,13 +189,16 @@
 }
 .our-team .pic {
     display: inline-block;
-    width: 10em;
-    height: 10em;
+    width: auto;
+    height: auto;
     border-radius:50%;
     margin-bottom: 10px;
+    object-fit: cover;
     z-index: 1;
     position: relative;
     overflow: hidden;
+    max-width: 180px;
+    max-height: 180px;
 }
 .our-team #pic1 > img{
     width: auto;
