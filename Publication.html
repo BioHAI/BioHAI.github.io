@@ -112,11 +112,11 @@
 									<ul style="list-style:none;">
 										<li>
 											<div class="paper-right-content">
-												<div style="font-size: 16px; font-weight: 500; color: #777777; font-family: Arial, sans-serif;">{{paper.paper_authors}}</div>
+												<div style="font-size: 14px; font-weight: 500; color: #777777; font-family: Arial, sans-serif;">{{paper.paper_authors}}</div>
 												<div style="font-size: 18px; font-weight: 700; color: #1a0dab;"> 
 													{{paper.paper_title}}
 												</div>
-												<div style="font-size: 15px; font-weight: 500; color: #000000">{{paper.paper_publiation}}.</div>
+												<div style="font-size: 16px; font-weight: 500; color: #000000">{{paper.paper_publiation}}.</div>
 												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
 												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
 											</div>
