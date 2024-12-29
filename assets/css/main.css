@@ -99,10 +99,10 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		/* font-family: 'Source Sans Pro'; */
+		font-family: 'Times New Roman', Times, serif;
 		font-weight: 500;
 		color: #5d5d5d;
-		font-size: 14pt;
+		font-size: 16pt;
 		line-height: 1.75em;
 	}
 
