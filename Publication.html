@@ -112,9 +112,11 @@
 									<ul style="list-style:none;">
 										<li>
 											<div class="paper-right-content">
+												
 												<div>{{paper.paper_authors}}</div>
-												<br>
-												<strong>{{paper.paper_title}}</strong>
+												<div> 
+													{{paper.paper_title}}
+												</div>
 												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
 												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
 												<br>
