@@ -78,11 +78,11 @@
 }
 .paper-right li{
 	line-height:20px;
-	font-size: 18px;
+	font-size: 16px;
 }
 .paper-right p{
-	font-size: 24px;
-	font-weight: bold;
+	font-size: 16px;
+	font-weight: normal;
 }
 
 .paper-section header{
