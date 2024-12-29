@@ -31,7 +31,7 @@
 }
 .box{
 	border: 1px solid #dddddd;
-  }
+}
 
 .line > p{
 	font-size:30px;
@@ -81,7 +81,7 @@
 	/* font-size: 16px; */
 }
 .paper-right p{
-	/* font-size: 16px; */
+	font-size: 15px;
 	font-weight: normal;
 }
 
@@ -106,7 +106,7 @@
 }
 .paper-left > a > img{
 	width:90px;
-	 height:70px;
+	height:70px;
 }
 .paper-right > ul{
 	margin-bottom: 0em;
@@ -127,8 +127,8 @@
 	margin-left: 0px;
 }
 #main{
-  padding-bottom: 2em;
-  padding-top: 2em;
+	padding-bottom: 2em;
+	padding-top: 2em;
 }
 .row{
 	margin-top: 0;
