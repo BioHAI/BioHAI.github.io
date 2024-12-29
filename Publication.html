@@ -117,7 +117,8 @@
 												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
 												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
 												<br>
-												<i style="font-weight:bold">{{paper.paper_publiation}}.</i>
+												<div>{{paper.paper_publiation}}.</div>
+												// <i style="font-weight:bold"></i>
 											</p>
 											<pre xml:space="preserve" style="display: none;">@inproceedings{PAMI:&nbsp;2021, Author={Xiawu&nbsp;Zheng,&nbsp;Yuhang&nbsp;Chen,Qiang&nbsp;Wang,&nbsp;Rongrong&nbsp;Ji*,&nbsp;Baochang&nbsp;Zhang,&nbsp;Jie&nbsp;Chen,&nbsp;Yonghong&nbsp;Tian,&nbsp;Qixiang&nbsp;Ye.}, Title={MIGO-NAS:&nbsp;Towards&nbsp;Fast&nbsp;and&nbsp;Generalizable&nbsp;Neural&nbsp;Architecture&nbsp;Search.},Booktitle={IEEE&nbsp;Transactions&nbsp;on&nbsp;Pattern&nbsp;Analysis&nbsp;and&nbsp;Machine&nbsp;Intelligence},Year={2021},&nbsp;Accept}</pre>
 										</li>
