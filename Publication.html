@@ -95,6 +95,12 @@
 		<script>
 			let paper_template = {
 				props: ['paperinformation'],
+				computed: {
+					sortedPaperInformationKeys() {
+						// 对对象的键进行排序，按数字从大到小排列
+						return Object.keys(this.paperinformation).sort((a, b) => b - a);
+					}
+				},
 				template:`
 					<div>
 						<div class="paper_year" v-for="(item,index) in  paperinformation" :key="index">
