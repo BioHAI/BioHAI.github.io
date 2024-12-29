@@ -61,6 +61,7 @@
 		height: 1px;
 		margin: 0em 0 0.5em 0;
 	}
+
 .paper-left{
 	width: 4em;
 	float: left;
@@ -93,6 +94,8 @@
 	height:auto;
 	position: relative;
 	margin-bottom: 0.5em;
+	display: flex;
+	align-items: flex-start;  /* 垂直对齐方式，确保两个元素对齐 */
 }
 .more-list > li > a{
 	color: black;
