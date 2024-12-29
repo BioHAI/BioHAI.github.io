@@ -103,12 +103,12 @@
 				},
 				template:`
 					<div>
-						<div class="paper_year" v-for="(item,index) in  sortedPaperInformationKeys" :key="index">
+						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
 							<header>
-								<h3 style="margin-top: 20px; color: red">Papers in {{index}}</h3>
+								<h3 style="margin-top: 20px; color: red">Papers in {{year}}</h3>
 								<h3 style="margin-top: 20px;"></h3>
 							</header>
-							<div class="paper-block" v-for="paper in item">
+							<div class="paper-block" v-for="paper in paperinformation[year]">
 								<div class="paper-left">
 									<a :href="paper.image_target" target="_blank">
 										<img :src="paper.image_src">
