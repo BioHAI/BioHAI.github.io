@@ -69,7 +69,6 @@
 	display: inline-block;
 }
 .paper-right{
-	font-size: 24px;
 	margin-left: 5em;
 	height: auto;
 }
@@ -81,7 +80,7 @@
 	line-height:20px;
 }
 .paper-right p{
-	font-size: 15px;
+	font-size: 24px;
 	font-weight: normal;
 }
 
