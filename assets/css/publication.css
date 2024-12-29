@@ -72,6 +72,10 @@
 	margin-left: 2em;
 	height: auto;
 }
+.paper-right-content{
+	display: flex;
+	align-items: center;
+}
 .paper-right ul{
 	margin-top: 5px;
     
