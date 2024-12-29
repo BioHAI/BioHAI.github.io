@@ -74,7 +74,7 @@
 }
 .paper-right-content{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 .paper-right ul{
 	margin-top: 5px;

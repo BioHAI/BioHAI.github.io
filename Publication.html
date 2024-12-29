@@ -112,15 +112,13 @@
 									<ul style="list-style:none;">
 										<li>
 											<div class="paper-right-content">
-												
 												<div>{{paper.paper_authors}}</div>
 												<div> 
 													{{paper.paper_title}}
 												</div>
 												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
 												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
-												<br>
-												<div>{{paper.paper_publiation}}.</div>
+												<div st>{{paper.paper_publiation}}.</div>
 											</div>
 											<pre xml:space="preserve" style="display: none;">@inproceedings{PAMI:&nbsp;2021, Author={Xiawu&nbsp;Zheng,&nbsp;Yuhang&nbsp;Chen,Qiang&nbsp;Wang,&nbsp;Rongrong&nbsp;Ji*,&nbsp;Baochang&nbsp;Zhang,&nbsp;Jie&nbsp;Chen,&nbsp;Yonghong&nbsp;Tian,&nbsp;Qixiang&nbsp;Ye.}, Title={MIGO-NAS:&nbsp;Towards&nbsp;Fast&nbsp;and&nbsp;Generalizable&nbsp;Neural&nbsp;Architecture&nbsp;Search.},Booktitle={IEEE&nbsp;Transactions&nbsp;on&nbsp;Pattern&nbsp;Analysis&nbsp;and&nbsp;Machine&nbsp;Intelligence},Year={2021},&nbsp;Accept}</pre>
 										</li>
