@@ -6,9 +6,12 @@
 	display: flex;
 	align-items: flex-start;  /* 垂直对齐方式，确保两个元素对齐 */
 	flex-direction: row;
+    background-color: aliceblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 添加阴影 */
+}
 }
 .paper-left{
-	width: 6em;
+	width: 4em;
     align-items: flex-start;
 	height: 75px;
 	display: inline-block;
