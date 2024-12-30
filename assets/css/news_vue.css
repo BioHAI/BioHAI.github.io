@@ -12,11 +12,11 @@
 }
 .paper-left{
 	width: 4em;
-    align-items: flex-start;
 	height: 75px;
-    line-height: 75px;
 	display: inline-block;
     padding-left: 1em;
+    justify-content: center;  
+    align-items: center;  
 }
 .paper-right{
 	margin-left: 2em;
