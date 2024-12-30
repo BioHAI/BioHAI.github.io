@@ -33,5 +33,8 @@
     margin: 10px 20px;
 }
 .teacher_info_name{
-    
+    text-align: left;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: cursive;
 }
