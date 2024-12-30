@@ -66,29 +66,27 @@
 .reward_box_left{
     width: 50%;
     height: 300px;
-    padding: 10px;
+    margin: 10px 0px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    justify-content: space-between; /* 子元素均匀分布 */
-    gap: 20px; /* 子元素之间的间距 */
 
 }
 .reward_box_image{
-    flex: 1 1 calc(50% - 20px); /* 每行两个：宽度为父容器的50%，减去间距 */
-    box-sizing: border-box; /* 包括padding和border在内的宽度计算 */
-    text-align: center;
-    border: 1px dashed #ddd; /* 添加虚线边框用于视觉分割 */
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    overflow: hidden; /* 防止溢出 */
 }
 .reward_box_image img {
-    width: 100%; /* 图片自适应宽度 */
-    height: auto; /* 保持原比例缩放 */
-    max-width: 300px; /* 可选：限制最大宽度 */
-    margin: 0 auto; /* 居中对齐 */
-    display: block;
+    max-width: 100%; /* 限制图片的最大宽度为父容器宽度 */
+    max-height: 100%; /* 限制图片的最大高度为父容器高度 */
+    width: auto; /* 按原比例缩放 */
+    height: auto; /* 按原比例缩放 */
+    object-fit: contain; /* 按原比例缩放，不裁剪 */
 
 }
 .reward_box_label{
