@@ -69,11 +69,12 @@
 
 }
 .reward_box_image{
+    margin: 0px 20px;
     height: 100%;
     width: 100%;
 }
 .reward_box_image img {
-    width: 100%; /* 图片宽度充满父容器 */
+    width: 60%; /* 图片宽度充满父容器 */
     height: auto; /* 保持图片比例 */
     object-fit: cover; /* 可选：确保图片覆盖父容器 */
 }
