@@ -54,3 +54,19 @@
     font-weight: bold;
     font-size: 18px;
 }
+.reward_box{
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward_box_left{
+    width: 50%;
+    height: auto;
+}
+
+.reward_box_right{
+    width: 50%;
+    height: auto;
+}
