@@ -28,4 +28,7 @@
     height: 75px;
     line-height: 75px;
     text-align: left;
+    font-size: 16px; 
+    font-weight: 700; 
+    color: #000000;
 }
