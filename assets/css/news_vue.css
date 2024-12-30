@@ -9,7 +9,6 @@
     background-color: aliceblue;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 添加阴影 */
 }
-}
 .paper-left{
 	width: 4em;
     align-items: flex-start;
