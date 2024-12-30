@@ -156,21 +156,9 @@
 		let teacher_template = {
 			template: `
 				<div style="width:100%; padding: 0px 0px;margin:0; text-align: center;">
-					<div class="col-md-3 col-sm-6" v-for ="teacher in teacher_information">
-						<div class="our-team" >
-							<div class="pic">
-								<img :src='teacher.teacher_image'>
-							</div>
-							<div class="team-content"><h4 class="title">{{teacher.teacher_name}}</h4><span class="post">{{ teacher.teacher_email }}</span><p class="team-content-p" >{{teacher.teacher_description}}</p>
-							</div>
-							<div class="social" align="center">
-								<a :href='teacher.teacher_index' target="_blank" class="fa fa-link fa-self">&nbsp;&nbsp;导师主页</a>
-								<a :href="teacher.teacher_google" target="_blank" class="fa fa-link fa-self">&nbsp;&nbsp;Google Scholar</a>
-							</div>
-						</div>
-					</div>
+					
 				</div>
-`,
+			`,
 			data: function (){
 				return {
 					teacher_information:[
