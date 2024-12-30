@@ -235,23 +235,6 @@
 								</div>
 
 							</div>
-
-							<div class="paper-block" v-for="paper in rewardinformation[year]">
-								<div class="paper-left">
-									<a :href="paper.image_target" target="_blank" v-if="paper.type === 'paper'">
-										[Paper]
-									</a>
-								</div>
-								<div class="paper-right">
-									<div class="paper-right-content" v-if="paper.type === 'paper'">
-											Congratulations to {{paper.paper_authors}}'s paper <i class="paper-title">{{paper.paper_title}}</i> have been accepted by {{paper.paper_publiation}}
-									</div>
-									<div class="paper-right-content" v-if="paper.type === 'others'">
-											{{paper.textdescription}}
-									</div>
-									<span class="highlight">{{paper.paper_publiation}}</span>
-								</div>
-							</div>
 						</div>
 					</div>
 
