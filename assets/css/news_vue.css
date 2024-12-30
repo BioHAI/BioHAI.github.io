@@ -64,10 +64,14 @@
 .reward_box_left{
     width: 50%;
     height: 200px;
+    margin: 10px 0px;
+    padding: 10px 0px;
 
 }
 
 .reward_box_right{
     width: 50%;
     height: 200px;
+    margin: 10px 0px;
+    padding: 10px 0px;
 }
