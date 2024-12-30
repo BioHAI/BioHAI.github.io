@@ -13,7 +13,7 @@
 .paper-left{
 	width: 4em;
 	height: 75px;
-	display: inline-block;
+	display: flex;
     padding-left: 1em;
     justify-content: center;  
     align-items: center;  
