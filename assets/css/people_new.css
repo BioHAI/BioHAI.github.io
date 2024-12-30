@@ -26,7 +26,12 @@
     object-fit: contain; /* 按原比例缩放，不裁剪 */
 }
 .teacher_info{
+    display: flex;
+    flex-direction: column;
     width: 80%;
     height: auto;
     margin: 10px 20px;
+}
+.teacher_info_name{
+    
 }
