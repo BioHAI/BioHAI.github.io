@@ -89,6 +89,10 @@
     object-fit: contain; /* 按原比例缩放，不裁剪 */
 
 }
+.reward_box_label{
+    width: 100%;
+    height: 100%;
+}
 .reward_box_right{
     width: 50%;
     height: 200px;
