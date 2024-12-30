@@ -8,12 +8,13 @@
 	flex-direction: row;
 }
 .paper-left{
-	width: 4em;
+	width: 20%;
     align-items: flex-start;
 	height: 75px;
 	display: inline-block;
 }
 .paper-right{
+    width: 75%;
 	margin-left: 2em;
 	height: auto;
 }
