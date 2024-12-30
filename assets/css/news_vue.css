@@ -72,11 +72,14 @@
     margin: 0px 20px;
     height: 100%;
     width: 100%;
+    overflow: hidden; /* 防止溢出 */
 }
 .reward_box_image img {
-    width: 60%; /* 图片宽度充满父容器 */
-    height: auto; /* 保持图片比例 */
-    object-fit: cover; /* 可选：确保图片覆盖父容器 */
+    max-width: 100%; /* 限制图片的最大宽度为父容器宽度 */
+    max-height: 100%; /* 限制图片的最大高度为父容器高度 */
+    width: auto; /* 按原比例缩放 */
+    height: auto; /* 按原比例缩放 */
+    object-fit: contain; /* 按原比例缩放，不裁剪 */
 }
 .reward_box_right{
     width: 50%;
