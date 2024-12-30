@@ -13,7 +13,7 @@
 }
 .paper-left{
 	width: 4em;
-	height: 75px;
+	height: auto;
 	display: flex;
     padding-left: 1em;
     justify-content: center;  
@@ -21,14 +21,14 @@
 }
 .paper-right{
 	margin-left: 2em;
-    height: 75px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;  
     align-items: center;   
 }
 .paper-right-content{
-    height: 75px;
+    height: auto;
     flex-wrap: wrap; /* 确保内容超出时换行 */
     text-align: left;
     justify-content: center;  
