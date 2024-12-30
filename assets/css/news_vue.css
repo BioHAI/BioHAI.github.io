@@ -71,7 +71,8 @@
 
 }
 .reward_box_image{
-    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
     overflow: hidden; /* 防止溢出 */
@@ -82,6 +83,7 @@
     width: auto; /* 按原比例缩放 */
     height: auto; /* 按原比例缩放 */
     object-fit: contain; /* 按原比例缩放，不裁剪 */
+
 }
 .reward_box_right{
     width: 50%;
