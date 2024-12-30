@@ -66,7 +66,7 @@
 									<div class="heading_border"></div> -->
 										<div class="demo">
 											<div class="container list" id = "about-paper">
-
+												<ppt :paperinformation="paperInformation"></ppt>
 											</div>
 
 											<div class="container list" id = "about-huojiang">
@@ -163,32 +163,101 @@
 
 		<!-- Scripts -->
 		<script>
-								$(function(){
-									//获取点击事件的对象
-									$(".nav li").click(function(){
-										//获取要显示或隐藏的对象
-										var divShow = $(".demo").children('.list');
-										//判断当前对象是否被选中，如果没选中的话进入if
-										if (!$(this).hasClass('active')) {
-											//获取当前对象的索引
-											var index = $(this).index();
-											//当前对象添加选中样式并且其同胞移除选中样式；
-											$(this).addClass('active').siblings('li').removeClass('active');
-											//索引对应的div块显示
-											$(divShow[index]).show();
-											//索引对应的div块的同胞隐藏
-											$(divShow[index]).siblings('.list').hide();
-										}
-									});
-								});
+			$(function(){
+				//获取点击事件的对象
+				$(".nav li").click(function(){
+					//获取要显示或隐藏的对象
+					var divShow = $(".demo").children('.list');
+					//判断当前对象是否被选中，如果没选中的话进入if
+					if (!$(this).hasClass('active')) {
+						//获取当前对象的索引
+						var index = $(this).index();
+						//当前对象添加选中样式并且其同胞移除选中样式；
+						$(this).addClass('active').siblings('li').removeClass('active');
+						//索引对应的div块显示
+						$(divShow[index]).show();
+						//索引对应的div块的同胞隐藏
+						$(divShow[index]).siblings('.list').hide();
+					}
+				});
+			});
 								
-						</script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</script>
+		<script>
+			let paper_template = {
+				props: ['paperinformation'],
+				computed: {
+					sortedPaperInformationKeys() {
+						// 对对象的键进行排序，按数字从大到小排列
+						return Object.keys(this.paperinformation).sort((a, b) => b - a);
+					}
+				},
+				template:`
+					<div>
+						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
+							<header>
+								<h3 style="margin-top: 20px; color: red">Papers in {{year}}</h3>
+								<h3 style="margin-top: 20px;"></h3>
+							</header>
+							<div class="paper-block" v-for="paper in paperinformation[year]">
+								<div class="paper-left">
+									<a :href="paper.image_target" target="_blank">
+										<img :src="paper.image_src">
+									</a>
+								</div>
+								<div class="paper-right">
+									<ul style="list-style:none;">
+										<li>
+											<div class="paper-right-content">
+												<div style="font-size: 13px; font-weight: 500; color: #777777; font-family: Arial, sans-serif;">{{paper.paper_authors}}</div>
+												<div style="font-size: 18px; font-weight: 700; color: #1a0dab;"> 
+													{{paper.paper_title}}
+												</div>
+												<div style="font-size: 16px; font-weight: 600; color: #000000">{{paper.paper_publiation}}.</div>
+												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
+												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
+											</div>
+											<pre xml:space="preserve" style="display: none;">@inproceedings{PAMI:&nbsp;2021, Author={Xiawu&nbsp;Zheng,&nbsp;Yuhang&nbsp;Chen,Qiang&nbsp;Wang,&nbsp;Rongrong&nbsp;Ji*,&nbsp;Baochang&nbsp;Zhang,&nbsp;Jie&nbsp;Chen,&nbsp;Yonghong&nbsp;Tian,&nbsp;Qixiang&nbsp;Ye.}, Title={MIGO-NAS:&nbsp;Towards&nbsp;Fast&nbsp;and&nbsp;Generalizable&nbsp;Neural&nbsp;Architecture&nbsp;Search.},Booktitle={IEEE&nbsp;Transactions&nbsp;on&nbsp;Pattern&nbsp;Analysis&nbsp;and&nbsp;Machine&nbsp;Intelligence},Year={2021},&nbsp;Accept}</pre>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				`,
+				data: function (){
+					return{
+
+					}
+				}
+			}
+			var app = new Vue({
+				el: '#page-wrapper',
+				data:{
+					paperInformation:{
+						'2022':[
+							{
+								image_target:'https://www.nature.com/articles/s42256-022-00557-6',
+								image_src:'images/papers/2022/ImageMol.png',
+								paper_authors: 'Xiangxiang Zeng, Hongxin Xiang, Linhui Yu, J Wang, Kenli Li, R Nussinov, Feixiong Cheng.',
+								paper_title: 'Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework.',
+								pdf_download:'http://spis.hnlat.com/scholar/redirect?url=https%3A%2F%2Fwww.cell.com%2Fcell-reports-methods%2Fpdf%2FS2667-2375(22)00287-9.pdf',
+								code_download: '',
+								paper_publiation: 'Nature Machine Intelligence '
+							}
+						]
+				},
+				components:{
+					ppt:paper_template
+				}
+			})
+		</script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
