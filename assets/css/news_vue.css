@@ -90,7 +90,6 @@
     width: auto; /* 按原比例缩放 */
     height: auto; /* 按原比例缩放 */
     object-fit: contain; /* 按原比例缩放，不裁剪 */
-
 }
 .reward_box_label{
     width: 100%;
