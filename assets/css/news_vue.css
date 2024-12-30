@@ -8,7 +8,7 @@
 	align-items: flex-start;  /* 垂直对齐方式，确保两个元素对齐 */
 	flex-direction: row;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 添加阴影 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);  /* 添加阴影 */
 }
 .paper-left{
 	width: 4em;
@@ -35,4 +35,9 @@
     font-size: 16px; 
     font-weight: 700; 
     color: #1771d0;
+}
+.highlight {
+    font-weight: bold;      /* 加粗 */
+    font-size: 1.2em;       /* 字体变大，可以调整具体大小 */
+    color: red;             /* 设置字体颜色为红色 */
 }
