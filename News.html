@@ -203,14 +203,16 @@
 							</header>
 							<div class="paper-block" v-for="paper in paperinformation[year]">
 								<div class="paper-left">
-									<a :href="paper.image_target" target="_blank">
+									<a :href="paper.image_target" target="_blank" v-if="paper.type === 'paper'">
 										[Paper]
 									</a>
 								</div>
 								<div class="paper-right">
 									<div class="paper-right-content" v-if="paper.type === 'paper'">
 											Congratulations to {{paper.paper_authors}}'s paper 《{{paper.paper_title}}》 have been accepted by {{paper.paper_publiation}}
-
+									</div>
+									<div class="paper-right-content" v-if="paper.type === 'others'">
+											{{paper.textdescription}}
 									</div>
 									<span class="highlight">{{paper.paper_publiation}}</span>
 								</div>
@@ -244,7 +246,8 @@
 								paper_publiation: 'AAAI 2025'
 							},
 							{
-								
+								type: 'others',
+								textdescription: "Congratulations to Yang Xinyu, a postdoctoral fellow, for receiving funding from the national 'Overseas Talent Attraction Project'."
 							}
 						
 						]
