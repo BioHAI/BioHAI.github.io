@@ -71,26 +71,7 @@
 											</div>
 
 											<div class="container list" id = "about-huojiang">
-												<div class="row row-people">
-
-													<div class="col-md-3 col-sm-6 hover">
-														
-														<div class="">
-															<div class="card-head">[2021-9-28]</div>
-
-															<div class="card-body"><a target="_blank"><img  src="images/news/huojiang/2021_9_28.jpg" alt="image"></a>
-															</div>
-															<div class="card-tag">湖南省计算机学会科学技术奖</div>
-															<div class="card-foot">
-																<div class="item-content">
-																	2021年9月，刘元盛、宋勃升、付祥政、蔡立军和曾湘祥的项目《多组学大数据智能分析与计算》获“湖南省计算机学会科学技术奖”二等奖，祝贺！
-																</div>
-															</div>
-														</div>
-													</div>
-													
-
-												</div>
+												<rwt :rewardinformation="rewardinformation"></rwt>
 											</div>
 
 											<div class="container list" id = "about-xueshu">
@@ -226,6 +207,47 @@
 					}
 				}
 			}
+			let reward_template = {
+				props: ['rewardinformation'],
+				computed: {
+					sortedPaperInformationKeys() {
+						// 对对象的键进行排序，按数字从大到小排列
+						return Object.keys(this.paperinformation).sort((a, b) => b - a);
+					}
+				},
+				template: `
+					<div>
+						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
+							<header>
+								<h3 style="margin-top: 20px; color: red">{{year}} latest news</h3>
+								<h3 style="margin-top: 20px;"></h3>
+							</header>
+							<div class="paper-block" v-for="paper in paperinformation[year]">
+								<div class="paper-left">
+									<a :href="paper.image_target" target="_blank" v-if="paper.type === 'paper'">
+										[Paper]
+									</a>
+								</div>
+								<div class="paper-right">
+									<div class="paper-right-content" v-if="paper.type === 'paper'">
+											Congratulations to {{paper.paper_authors}}'s paper <i class="paper-title">{{paper.paper_title}}</i> have been accepted by {{paper.paper_publiation}}
+									</div>
+									<div class="paper-right-content" v-if="paper.type === 'others'">
+											{{paper.textdescription}}
+									</div>
+									<span class="highlight">{{paper.paper_publiation}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				`,
+				data: function (){
+					return {
+
+					}
+				}
+			}
 			var app = new Vue({
 				el: '#page-wrapper',
 				data:{
@@ -287,10 +309,18 @@
 						
 						]
 					
+					},
+					rewardinformation:{
+						'2024':[
+							{
+
+							}
+						]
 					}
 				},
 				components:{
-					ppt:paper_template
+					ppt:paper_template,
+					rwt:reward_template
 				}
 			})
 	
