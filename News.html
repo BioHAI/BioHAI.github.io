@@ -210,19 +210,19 @@
 			let reward_template = {
 				props: ['rewardinformation'],
 				computed: {
-					sortedPaperInformationKeys() {
+					sortedRewardInformationKeys() {
 						// 对对象的键进行排序，按数字从大到小排列
-						return Object.keys(this.paperinformation).sort((a, b) => b - a);
+						return Object.keys(this.rewardinformation).sort((a, b) => b - a);
 					}
 				},
 				template: `
 					<div>
-						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
+						<div class="paper_year" v-for="year in  sortedRewardInformationKeys" :key="year">
 							<header>
 								<h3 style="margin-top: 20px; color: red">{{year}} latest news</h3>
 								<h3 style="margin-top: 20px;"></h3>
 							</header>
-							<div class="paper-block" v-for="paper in paperinformation[year]">
+							<div class="paper-block" v-for="paper in rewardinformation[year]">
 								<div class="paper-left">
 									<a :href="paper.image_target" target="_blank" v-if="paper.type === 'paper'">
 										[Paper]
@@ -310,7 +310,7 @@
 						]
 					
 					},
-					rewardinformation:{
+					rewardInformation:{
 						'2024':[
 							{
 
