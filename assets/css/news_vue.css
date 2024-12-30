@@ -32,7 +32,7 @@
     flex-wrap: wrap; /* 确保内容超出时换行 */
     text-align: left;
     justify-content: center;  
-    margin-top: 15px;
+    margin-top: 10px;
     align-items: center;      
     font-size: 16px; 
     font-weight: 700; 
