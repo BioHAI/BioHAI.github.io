@@ -2,13 +2,14 @@
 	width:100%;
 	height:auto;
 	position: relative;
-	margin-bottom: 0.5em;
 	display: flex;
 	align-items: flex-start;  /* 垂直对齐方式，确保两个元素对齐 */
 	flex-direction: row;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);  /* 添加阴影 */
     border-left: 2px solid #00BFFF;
+    margin: 15px 0; /* 增加上下间距 */
+    padding: 10px; /* 内边距增加，内容更舒展 */
 }
 .paper-left{
 	width: 4em;
@@ -49,4 +50,5 @@
 .paper-title{
     color: red;   
     font-weight: bold;
+    font-size: 18px;
 }
