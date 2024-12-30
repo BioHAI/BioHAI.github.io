@@ -27,9 +27,10 @@
 }
 .paper-right-content{
     height: 75px;
-    display: flex;
+    flex-wrap: wrap; /* 确保内容超出时换行 */
     text-align: left;
     justify-content: center;  
+    margin-top: 15px;
     align-items: center;      
     font-size: 16px; 
     font-weight: 700; 
@@ -37,10 +38,14 @@
     width: 85%;
 }
 .highlight {
-    font-weight: bold;      /* 加粗 */
+       /* 加粗 */
     font-size: 14px;       /* 字体变大，可以调整具体大小 */
     color: red;             /* 设置字体颜色为红色 */
     width: 15%;
     text-align: center;
     padding-right: 4px;
+}
+.paper-title{
+    color: red;   
+    font-weight: bold;
 }
