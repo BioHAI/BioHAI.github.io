@@ -198,7 +198,7 @@
 					<div>
 						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
 							<header>
-								<h3 style="margin-top: 20px; color: red">{{year}}年论文接收情况</h3>
+								<h3 style="margin-top: 20px; color: red">{{year}} latest news</h3>
 								<h3 style="margin-top: 20px;"></h3>
 							</header>
 							<div class="paper-block" v-for="paper in paperinformation[year]">
@@ -208,9 +208,9 @@
 									</a>
 								</div>
 								<div class="paper-right">
-									<div class="paper-right-content">
+									<div class="paper-right-content" v-if="paper.type === 'paper'">
 											Congratulations to {{paper.paper_authors}}'s paper 《{{paper.paper_title}}》 have been accepted by {{paper.paper_publiation}}
-											
+
 									</div>
 									<span class="highlight">{{paper.paper_publiation}}</span>
 								</div>
@@ -230,17 +230,23 @@
 					paperInformation:{
 						'2024':[
 							{
+								type:'paper',
 								image_target:'',
 								paper_authors: 'Tengfei Ma',
 								paper_title: 'S2DN: Learning to Denoise Unconvincing Knowledge for Inductive Knowledge Graph Completion',
 								paper_publiation: 'AAAI 2025'
 							},
 							{
+								type:'paper',
 								image_target:'',
 								paper_authors: 'Jiahao Yang',
 								paper_title: 'Multi-Objective Molecular Design Through Learning Latent Pareto Set',
 								paper_publiation: 'AAAI 2025'
+							},
+							{
+								
 							}
+						
 						]
 					
 					}
