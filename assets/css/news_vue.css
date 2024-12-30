@@ -28,10 +28,11 @@
 }
 .paper-right-content{
     height: 75px;
+    display: flex;
     text-align: left;
     justify-content: center;  
     align-items: center;      
     font-size: 16px; 
     font-weight: 700; 
-    color: #000000;
+    color: #1771d0;
 }
