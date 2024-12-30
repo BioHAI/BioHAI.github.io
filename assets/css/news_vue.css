@@ -34,12 +34,12 @@
     font-size: 16px; 
     font-weight: 700; 
     color: #1771d0;
-    width: 90%;
+    width: 85%;
 }
 .highlight {
     font-weight: bold;      /* 加粗 */
     font-size: 1.2em;       /* 字体变大，可以调整具体大小 */
     color: red;             /* 设置字体颜色为红色 */
-    width: 10%;
+    width: 15%;
     text-align: center;
 }
