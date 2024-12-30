@@ -223,8 +223,8 @@
 								<h3 style="margin-top: 20px;"></h3>
 							</header>
 
-							<div class="reward_box" v-for="reward in rewardinformation[year]">
-								<div class ="reward_box_left">
+							<div class="reward_box" >
+								<div class ="reward_box_left" v-for="reward in rewardinformation[year]">
 									<div class ="reward_box_image">
 										<img  :src="reward.image_file" alt="image">
 									</div>
