@@ -61,14 +61,16 @@
     flex-direction: row;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);  /* 添加阴影 */
     border-left: 2px solid #00BFFF;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    justify-content: space-between; /* 子元素之间均匀分布 */
+    gap: 20px; /* 子元素之间的间距 */
+    width: 100%;
 }
 
 .reward_box_left{
-    width: 50%;
+    flex: 0 0 calc(50% - 20px); /* 每行显示两个，减去间距 */
     height: 300px;
-    margin: 10px 10px;
-    padding: 10px 0px;
+    padding: 10px
     display: flex;
     flex-direction: column;
     align-items: center;
