@@ -55,10 +55,12 @@
     font-size: 18px;
 }
 .reward_box{
-    height: 200px;
+    height: 400px;
     background-color: white;
     display: flex;
     flex-direction: row;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);  /* 添加阴影 */
+    border-left: 2px solid #00BFFF;
 }
 
 .reward_box_left{
