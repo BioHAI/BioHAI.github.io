@@ -36,11 +36,16 @@
       .line {
         padding-top: 2em; } }
     @media screen and (max-width: 736px) {
-      .line {
-        padding-top: 2em; }
+        .line {
+            padding-top: 2em; }
         .logo {
-          font-size: 1.25em;
-          margin: 0; }}
+            font-size: 1.25em;
+            margin: 0; }
+        .highlight {
+            display: none; /* 隐藏右侧内容 */
+        }
+
+        }
 
 .line > p{
   font-size:30px;
