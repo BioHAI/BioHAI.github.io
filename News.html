@@ -204,20 +204,17 @@
 							<div class="paper-block" v-for="paper in paperinformation[year]">
 								<div class="paper-left">
 									<a :href="paper.image_target" target="_blank">
-										[Paper's Link]
+										[Paper]
 									</a>
 								</div>
 								<div class="paper-right">
 									<ul style="list-style:none;">
 										<li>
 											<div class="paper-right-content">
-												<div style="font-size: 13px; font-weight: 500; color: #777777; font-family: Arial, sans-serif;">{{paper.paper_authors}}</div>
 												<div style="font-size: 18px; font-weight: 700; color: #1a0dab;"> 
 													{{paper.paper_title}}
 												</div>
 												<div style="font-size: 16px; font-weight: 600; color: #000000">{{paper.paper_publiation}}.</div>
-												<a :href="paper.pdf_download" target="_blank" v-if="paper.pdf_download!=''">[pdf]</a>
-												<a :href="paper.code_download" target="_blank" v-if="paper.code_download!=''">[code]</a>
 											</div>
 											<pre xml:space="preserve" style="display: none;">@inproceedings{PAMI:&nbsp;2021, Author={Xiawu&nbsp;Zheng,&nbsp;Yuhang&nbsp;Chen,Qiang&nbsp;Wang,&nbsp;Rongrong&nbsp;Ji*,&nbsp;Baochang&nbsp;Zhang,&nbsp;Jie&nbsp;Chen,&nbsp;Yonghong&nbsp;Tian,&nbsp;Qixiang&nbsp;Ye.}, Title={MIGO-NAS:&nbsp;Towards&nbsp;Fast&nbsp;and&nbsp;Generalizable&nbsp;Neural&nbsp;Architecture&nbsp;Search.},Booktitle={IEEE&nbsp;Transactions&nbsp;on&nbsp;Pattern&nbsp;Analysis&nbsp;and&nbsp;Machine&nbsp;Intelligence},Year={2021},&nbsp;Accept}</pre>
 										</li>
