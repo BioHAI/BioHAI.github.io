@@ -1,0 +1,19 @@
+.paper-block{
+	width:100%;
+	height:auto;
+	position: relative;
+	margin-bottom: 0.5em;
+	display: flex;
+	align-items: flex-start;  /* 垂直对齐方式，确保两个元素对齐 */
+	flex-direction: row;
+}
+.paper-left{
+	width: 4em;
+    align-items: flex-start;
+	height: 75px;
+	display: inline-block;
+}
+.paper-right{
+	margin-left: 2em;
+	height: auto;
+}
