@@ -58,7 +58,7 @@
     height: 200px;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .reward_box_left{
