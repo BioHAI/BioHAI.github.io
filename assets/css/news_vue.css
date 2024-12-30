@@ -63,10 +63,11 @@
 
 .reward_box_left{
     width: 50%;
-    height: auto;
+    height: 200px;
+
 }
 
 .reward_box_right{
     width: 50%;
-    height: auto;
+    height: 200px;
 }
