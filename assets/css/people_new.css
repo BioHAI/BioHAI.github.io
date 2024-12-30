@@ -1,5 +1,5 @@
 .teacher_infomation{
-    height: 200px;
+    height: 280px;
     width: 93%;
     background-color: white;
     display: flex;
@@ -10,6 +10,6 @@
 }
 .teacher_photo{
     width: 20%;
-    height: 200px;
+    height: 100%;
     margin: 20px 20px;
 }
