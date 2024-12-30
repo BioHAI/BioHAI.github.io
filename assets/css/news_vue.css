@@ -20,5 +20,6 @@
 }
 .paper-right{
 	margin-left: 2em;
-	height: auto;
+    height: 75px;
+    line-height: 75px;
 }
