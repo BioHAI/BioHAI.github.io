@@ -198,7 +198,7 @@
 					<div>
 						<div class="paper_year" v-for="year in  sortedPaperInformationKeys" :key="year">
 							<header>
-								<h3 style="margin-top: 20px; color: red">Papers in {{year}}</h3>
+								<h3 style="margin-top: 20px; color: red">{{year}}</h3>
 								<h3 style="margin-top: 20px;"></h3>
 							</header>
 							<div class="paper-block" v-for="paper in paperinformation[year]">
@@ -228,12 +228,18 @@
 				el: '#page-wrapper',
 				data:{
 					paperInformation:{
-						'2022':[
+						'2024':[
 							{
-								image_target:'https://www.nature.com/articles/s42256-022-00557-6',
-								paper_authors: 'Hongxin Xiang',
-								paper_title: 'Accurate prediction of molecular properties and drug targets using a self-supervised image representation learning framework',
-								paper_publiation: 'Nature Machine Intelligence '
+								image_target:'',
+								paper_authors: 'Tengfei Ma',
+								paper_title: 'S2DN: Learning to Denoise Unconvincing Knowledge for Inductive Knowledge Graph Completion',
+								paper_publiation: 'AAAI 2025'
+							},
+							{
+								image_target:'',
+								paper_authors: 'Jiahao Yang',
+								paper_title: 'Multi-Objective Molecular Design Through Learning Latent Pareto Set',
+								paper_publiation: 'AAAI 2025'
 							}
 						]
 					
