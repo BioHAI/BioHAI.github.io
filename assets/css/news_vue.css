@@ -22,6 +22,7 @@
 	margin-left: 2em;
     height: 75px;
     line-height: 75px;
+    align-items: flex-start;
 }
 .paper-right-content{
     height: 75px;
