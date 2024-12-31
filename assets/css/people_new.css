@@ -55,3 +55,8 @@
     height: 40px; */
     padding-left: 24px;
 }
+.teacher_info_index{
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+}
