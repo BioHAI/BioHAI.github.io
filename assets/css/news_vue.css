@@ -50,6 +50,7 @@
     text-align: center;
     padding-right: 4px;
     font-weight: bold;
+    overflow: hidden;
 }
 .paper-title{
     color: red;   
