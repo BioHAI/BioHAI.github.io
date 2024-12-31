@@ -1,13 +1,13 @@
 .teacher_infomation{
-    height: 240px;
+    height: 260px;
     width: 93%;
     background-color: white;
     display: flex;
     flex-direction: row;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     padding: 0px 20px;
     margin: 5px 20px;
-    border-top: 3px solid #0425fc;
+    border-top: 3px solid #2AA7DE;
     
 }
 .teacher_photo{
@@ -32,7 +32,6 @@
     width: 80%;
     height: auto;
     margin: 10px 20px;
-    border-left: 1px solid #a7a7a7;
 }
 .teacher_info_name{
     color: black;
@@ -42,4 +41,17 @@
     font-family: cursive;
     line-height: 40px;
     height: 40px;
+    padding-left: 20px;
+    border-left: 3px solid #DC8870;
+}
+
+.teacher_info_title{
+    color: black;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: cursive;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 20px;
 }
