@@ -67,7 +67,8 @@
 .teacher_info_email{
     padding-left: 24px;
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-align: left;
+    font-family: 'Times New Roman', Times, serif;
 }
