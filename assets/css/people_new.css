@@ -64,3 +64,10 @@
     gap: 20px;
     padding-top: 10px;
 }
+.teacher_info_index{
+    padding-left: 24px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
