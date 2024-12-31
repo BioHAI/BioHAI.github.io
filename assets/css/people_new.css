@@ -59,4 +59,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: self-start;
+    padding-left: 24px;
+    flex-direction: row;
 }
