@@ -4,7 +4,7 @@
     background-color: white;
     display: flex;
     flex-direction: row;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     padding: 0px 20px;
     margin: 5px 20px;
     border-top: 3px solid #0425fc;
@@ -32,6 +32,7 @@
     width: 80%;
     height: auto;
     margin: 10px 20px;
+    border-left: 1px solid #a7a7a7;
 }
 .teacher_info_name{
     color: black;
