@@ -1,5 +1,6 @@
 .teacher_infomation{
-    height: 260px;
+    min-height: 260px;
+    height: auto;
     width: 93%;
     background-color: white;
     display: flex;
