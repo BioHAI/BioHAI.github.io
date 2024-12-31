@@ -61,4 +61,6 @@
     align-items: self-start;
     padding-left: 24px;
     flex-direction: row;
+    gap: 20px;
+    padding-top: 10px;
 }
