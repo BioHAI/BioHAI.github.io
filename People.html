@@ -312,28 +312,31 @@
 		let student_template ={
 			props: ['information'],
 			template: `
-				<div style="width:100%; padding: 0px 0px;margin:0; text-align: center;">
-					<div class="col-md-4 col-sm-6" v-for="student in information">
-						<div class="our-team">
-							<div class="pic">
-								<img :src="student.student_image" style="overflow: hidden;width: 100%;height: 100%">
-							</div>
-							<div class="team-content">
-								<h4 class="title">{{student.student_name}}</h4>
-								<p style="margin-bottom: 0;font-size: 14px">{{student.student_organization}}</p>
-								<span class="post">{{student.student_email}}</span>
-								<p class="team-content-p">{{student.student_description}}</p>
-							</div>
-							<div class="social" align="center">
+			<div>
+				<div class="study_year" v-for="year in  information" :key="year">
+					{{year}}
+					<div style="width:100%; padding: 0px 0px;margin:0; text-align: center;">
+						<div class="col-md-4 col-sm-6" v-for="student in information[year]">
+							<div class="our-team">
+								<div class="pic">
+									<img :src="student.student_image" style="overflow: hidden;width: 100%;height: 100%">
+								</div>
+								<div class="team-content">
+									<h4 class="title">{{student.student_name}}</h4>
+									<p style="margin-bottom: 0;font-size: 14px">{{student.student_organization}}</p>
+									<span class="post">{{student.student_email}}</span>
+									<p class="team-content-p">{{student.student_description}}</p>
+								</div>
+								<div class="social" align="center">
 
-								<a :href="student.student_page" target="_blank" class="fa fa-link fa-self" v-if="student.student_page!='' ">&nbsp;&nbsp;个人主页</a>
-								<a :href="student.student_google" target="_blank" class="fa fa-link fa-self" v-if="student.student_google!='' ">&nbsp;&nbsp;Google Scholar</a>
+									<a :href="student.student_page" target="_blank" class="fa fa-link fa-self" v-if="student.student_page!='' ">&nbsp;&nbsp;个人主页</a>
+									<a :href="student.student_google" target="_blank" class="fa fa-link fa-self" v-if="student.student_google!='' ">&nbsp;&nbsp;Google Scholar</a>
 
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
+			</div
 			`,
 			data: function (){
 				return {
@@ -429,244 +432,64 @@
 
 				],
 				//硕士研究生数据
-				ss_student_information:[
-					{
-						student_name:'杨慧丹',
-						student_email:'yhd_cpu@163.com',
-						student_organization:'2021级',
-						student_description:'',
-						student_image:'images/people/2023/yanghuidan.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'李毅晨',
-						student_email:'yichenli899@gmail.com',
-						student_organization:'2021级',
-						student_description:'',
-						student_image:'images/people/2023/liyichen.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'王玉杰',
-						student_email:'jelisiesoo2020@gmail.com',
-						student_organization:'2021级',
-						student_description:'',
-						student_image:'images/people/2023/wangyujie.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'陈述高',
-						student_email:'1170695482@qq.com',
-						student_organization:'2021级',
-						student_description:'北京深势科技实习',
-						student_image:'images/people/2023/chenshugao.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'周珍冉',
-						student_email:'zhouzhenran@hnu.edu.cn',
-						student_organization:'2021级',
-						student_description:'联想实习',
-						student_image:'images/people/2023/zhouzhenran.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'陶雯',
-						student_email:'taowen@hnu.edu.cn',
-						student_organization:'2021级',
-						student_description:'上海宇耀生物实习',
-						student_image:'images/people/2023/taowen.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'张翔',
-						student_email:'zhxiang@hnu.edu.cn',
-						student_organization:'2021级',
-						student_description:'',
-						student_image:'images/people/2023/zhangxiang.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'侯琳琳',
-						student_email:'houlinlin@hnu.edu.cn',
-						student_organization:'2022级',
-						student_description:'上海宇耀生物实习',
-						student_image:'images/people/2023/houlinlin.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'沈祥振',
-						student_email:'wayyzt@hnu.edu.cn',
-						student_organization:'2022级',
-						student_description:'',
-						student_image:'images/people/2023/shengxiangzheng.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'程志祥',
-						student_email:'zhixiangcheng@hnu.edu.cn',
-						student_organization:'2022级',
-						student_description:'上海宇耀生物实习',
-						student_image:'images/people/2023/chengzhixiang.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'夏忻焱',
-						student_email:'xiaxinyan@hnu.edu.cn',
-						student_organization:'2022级',
-						student_description:'',
-						student_image:'images/people/2023/xiaxinyan.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'陈泽慧',
-						student_email:'chenzehui_mail@126.com',
-						student_organization:'2022级',
-						student_description:'',
-						student_image:'images/people/2023/chenzehui.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'陈睿哲',
-						student_email:'1031896142@qq.com',
-						student_organization:'2022级',
-						student_description:'',
-						student_image:'images/people/2023/chenruizhe.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'张艺才',
-						student_email:'zycpppppppp@163.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/zhangyicai.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'何玉琴',
-						student_email:'heyuqin2023@163.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/heyuqin.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'刘翊纬',
-						student_email:'huhuhuhupi@gmail.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/liuyuwei.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'张嘉仪',
-						student_email:'meowbean2022@163.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/zhangjiayi.png',
-						student_page:'',
-						student_google:''
-					},
-
-					{
-						student_name:'谢聆轩',
-						student_email:'2339836923@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/xielinxuan.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'李晓雯',
-						student_email:'1345096680@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/lixiaowen.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'于洲',
-						student_email:'2904509297@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/yuzhou.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'肖宇航',
-						student_email:'528381103@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/xiaoyuhang.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'甄茁文',
-						student_email:'zwzhen@hnu.edu.cn',
-						student_organization:'2023级',
-						student_description:'中国三峡集团实习',
-						student_image:'images/people/2023/zhenzhuowen.png',
-						student_page:'',
-						student_google:''
-					},
-
-					{
-						student_name:'李津松',
-						student_email:'2875494383@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/lijinsong.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'李超逸',
-						student_email:'494899367@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/lichaoyi.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'巢秀秀',
-						student_email:'2929837219@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/chaoxiuxiu.png',
-						student_page:'',
-						student_google:''
-					},
-					{
-						student_name:'欧伟豪',
-						student_email:'1804400792@qq.com',
-						student_organization:'2023级',
-						student_description:'',
-						student_image:'images/people/2023/ouweihao.png',
-						student_page:'',
-						student_google:''
-					},
-				]
+				ss_student_information:{
+					'2022':[
+						{
+							student_name:'侯琳琳',
+							student_email:'houlinlin@hnu.edu.cn',
+							student_organization:'2022级',
+							student_description:'上海宇耀生物实习',
+							student_image:'images/people/2023/houlinlin.png',
+							student_page:'',
+							student_google:''
+						},
+						{
+							student_name:'沈祥振',
+							student_email:'wayyzt@hnu.edu.cn',
+							student_organization:'2022级',
+							student_description:'',
+							student_image:'images/people/2023/shengxiangzheng.png',
+							student_page:'',
+							student_google:''
+						},
+						{
+							student_name:'程志祥',
+							student_email:'zhixiangcheng@hnu.edu.cn',
+							student_organization:'2022级',
+							student_description:'上海宇耀生物实习',
+							student_image:'images/people/2023/chengzhixiang.png',
+							student_page:'',
+							student_google:''
+						},
+						{
+							student_name:'夏忻焱',
+							student_email:'xiaxinyan@hnu.edu.cn',
+							student_organization:'2022级',
+							student_description:'',
+							student_image:'images/people/2023/xiaxinyan.png',
+							student_page:'',
+							student_google:''
+						},
+						{
+							student_name:'陈泽慧',
+							student_email:'chenzehui_mail@126.com',
+							student_organization:'2022级',
+							student_description:'',
+							student_image:'images/people/2023/chenzehui.png',
+							student_page:'',
+							student_google:''
+						},
+						{
+							student_name:'陈睿哲',
+							student_email:'1031896142@qq.com',
+							student_organization:'2022级',
+							student_description:'',
+							student_image:'images/people/2023/chenruizhe.png',
+							student_page:'',
+							student_google:''
+						},
+					],
+				}
 			},
 			components:{
 				tet: teacher_template,
