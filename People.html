@@ -311,9 +311,15 @@
 
 		let student_template ={
 			props: ['information'],
+			computed: {
+					sortedInformationKeys() {
+						// 对对象的键进行排序，按数字从大到小排列
+						return Object.keys(this.information).sort((a, b) => b - a);
+					}
+				},
 			template: `
 			<div>
-				<div class="study_year" v-for="year in  information" :key="year">
+				<div class="study_year" v-for="year in sortedInformationKeys" :key="year">
 					{{year}}
 					<div style="width:100%; padding: 0px 0px;margin:0; text-align: center;">
 						<div class="col-md-4 col-sm-6" v-for="student in information[year]">
