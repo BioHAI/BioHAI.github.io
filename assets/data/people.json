@@ -618,5 +618,23 @@
     "role": "master",
     "cohort": "2024",
     "thumbnail": "images/people/thumbs/member-049.webp"
+  },
+  {
+    "id": "member-62b8c369-ad0a-452b-941b-ee1d0507c289",
+    "name": "廉晓庆",
+    "role": "phd",
+    "email": "xqlian@foxmail.com",
+    "cohort": "2025",
+    "bio": "虚拟细胞",
+    "english": "",
+    "rank": "",
+    "rankZh": "",
+    "url": "",
+    "scholar": "",
+    "website": "",
+    "alternateEmail": "",
+    "interests": [],
+    "image": "images/uploads/members/12b9f20c-640d-4971-9e26-9fb48368e620.jpg",
+    "thumbnail": "images/uploads/members/12b9f20c-640d-4971-9e26-9fb48368e620-preview.webp"
   }
 ]
