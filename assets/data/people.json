@@ -636,5 +636,23 @@
     "interests": [],
     "image": "images/uploads/members/12b9f20c-640d-4971-9e26-9fb48368e620.jpg",
     "thumbnail": "images/uploads/members/12b9f20c-640d-4971-9e26-9fb48368e620-preview.webp"
+  },
+  {
+    "id": "member-eb7345d3-8700-45bc-9e6b-936e2690a89a",
+    "name": "史湾湾",
+    "role": "postdoc",
+    "email": "shiwanwan@hnu.edu.cn",
+    "cohort": "2026",
+    "bio": "5D虚拟细胞、AI+生物育种",
+    "english": "",
+    "rank": "",
+    "rankZh": "",
+    "url": "",
+    "scholar": "",
+    "website": "",
+    "alternateEmail": "",
+    "interests": [],
+    "image": "images/uploads/members/fdc9ee09-1352-4501-9865-1e2f0486fc24.jpg",
+    "thumbnail": "images/uploads/members/fdc9ee09-1352-4501-9865-1e2f0486fc24-preview.webp"
   }
 ]
