@@ -1,3 +1,4 @@
 .research-sync-cache/
 .site-dist/
 *.tmp
+.local-admin/

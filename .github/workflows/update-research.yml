@@ -37,6 +37,8 @@ jobs:
         run: npm run test:research
       - name: Test visitor map loading and recovery
         run: npm run test:visitors
+      - name: Test local content management
+        run: npm run test:admin
       - name: Read the faculty publication list
         run: npm run sync:research
       - name: Validate website data and assets

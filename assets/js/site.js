@@ -53,7 +53,7 @@
       <Pager :page="page" :pages="pages" :total="filtered.length" :size="size" @change="go" /></div></div>`};
   const MemberCard={props:{person:Object,faculty:Boolean},setup(){const failed=ref(false);return{failed,external};},template:`<article :class="faculty?'faculty-card':'member-card'"><template v-if="faculty"><img v-if="person.image&&!failed" class="faculty-photo" :src="person.thumbnail||person.image" :alt="person.name+'的照片'" @error="failed=true" loading="lazy"><span v-else class="faculty-photo photo-fallback">{{person.name.slice(-2)}}</span><div class="professor-identity"><span class="role-label">{{person.rank||'Professor'}}</span><h3 class="member-name">{{person.name}}</h3><p v-if="person.rankZh" class="professor-rank">{{person.rankZh}}</p><p v-if="person.english" class="english-name">{{person.english}}</p></div><p class="faculty-bio">{{person.bio}}</p><div v-if="person.interests" class="professor-tags"><span v-for="t in person.interests" :key="t">{{t}}</span></div></template><template v-else><div class="member-top"><img v-if="person.image&&!failed" class="member-photo" :src="person.thumbnail||person.image" :alt="person.name+'的照片'" loading="lazy" @error="failed=true"><span v-else class="member-photo photo-fallback">{{person.name.slice(-2)}}</span><div><span class="role-label">{{person.roleLabel}}</span><h3 class="member-name">{{person.name}}</h3><p v-if="person.cohort" class="cohort">{{person.cohort}} 级</p></div></div><p v-if="person.bio" class="member-bio">{{person.bio}}</p></template><div class="member-links"><a v-if="person.url" :href="person.url" v-bind="external">个人主页 ↗</a><a v-if="person.scholar" :href="person.scholar" v-bind="external">Scholar ↗</a><a v-if="person.email" :href="'mailto:'+person.email" :title="person.email">联系成员 ↗</a><a v-if="person.website" :href="person.website" v-bind="external">学术主页 ↗</a></div></article>`};
   const PeopleDirectory={components:{MemberCard},props:['members'],setup(props){
-    const q=ref(''),role=ref('all'),degree=ref('all'),studentYear=ref('all');
+    const q=ref(new URLSearchParams(location.search).get('q')||''),role=ref('all'),degree=ref('all'),studentYear=ref('all');
     const roles=[{id:'faculty',en:'Professors',zh:'导师'},{id:'visiting',en:'Visiting scholars',zh:'访问学者'},{id:'postdoc',en:'Postdocs',zh:'博士后'},{id:'students',en:'Students',zh:'学生'}];
     const isStudent=p=>p.role==='phd'||p.role==='master';
     const allStudents=computed(()=>props.members.filter(isStudent));
@@ -81,7 +81,7 @@
     const titles={home:'',people:'People',publications:'Publications',news:'News',research:'Research',openings:'Openings',alumni:'Alumni'};
     document.title=(titles[page]?titles[page]+' · ':'')+'AI4Health @ Hunan University';
     const app=createApp({components:{PaperExplorer,PeopleDirectory,ResearchPage,OpeningsPage,VisitorMap:window.BioHAIVisitorMap},setup(){
-      const menuOpen=ref(false),theme=ref(document.documentElement.dataset.theme||'light'),activePaper=ref(null),figureDialog=ref(null),newsTab=ref('research'),content=ref(''),contentError=ref(false);
+      const menuOpen=ref(false),theme=ref(document.documentElement.dataset.theme||'light'),activePaper=ref(null),figureDialog=ref(null),newsTab=ref(['awards','life'].includes(new URLSearchParams(location.search).get('tab'))?new URLSearchParams(location.search).get('tab'):'research'),content=ref(''),contentError=ref(false);
       const homeHeaderHeight=ref(91),researchVisible=ref(false);
       let homeHeaderObserver,researchObserver;
       onMounted(()=>{

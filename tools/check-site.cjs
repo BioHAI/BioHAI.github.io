@@ -42,6 +42,7 @@ for(const project of lab.projects){assert.ok(project.title&&project.program&&pro
 for(const file of ['images/brand/ai4health-logo-transparent.png','images/brand/slogan.png','images/brand/world-land.svg','assets/data/visitor-map.json','assets/fonts/Manrope-Variable.ttf','assets/fonts/Manrope-OFL.txt','assets/fonts/NotoSansSC-Site.woff2','assets/fonts/NotoSansSC-OFL.txt'])asset(file);
 assert.ok(!read('assets/js/site.js').includes('/ RESEARCH FIGURE'));
 for(const file of ['assets/js/site.js','assets/js/lab-pages.js','assets/js/visitor-map.js','tools/build-world-map.cjs','tools/serve.cjs','tools/build-pages.cjs','tools/sync-research.cjs','tools/research-sync/parse.cjs','tools/research-sync/enrich.cjs','tools/watch-research.cjs','tools/package-site.cjs'])cp.execFileSync(process.execPath,['--check',path.join(root,file)],{stdio:'pipe'});
+for(const file of ['tools/admin/store.cjs','tools/admin/publish.cjs','tools/admin/server.cjs','tools/admin/ui/app.js'])cp.execFileSync(process.execPath,['--check',path.join(root,file)],{stdio:'pipe'});
 const {resolveVisitorMap}=require('../assets/js/visitor-map.js');
 const visitorConfig=JSON.parse(read('assets/data/visitor-map.json'));
 assert.ok(Array.isArray(visitorConfig.siteHosts)&&typeof visitorConfig.enabled==='boolean');

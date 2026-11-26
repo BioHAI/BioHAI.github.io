@@ -4,6 +4,8 @@
   "private": true,
   "description": "AI4Health at Hunan University — a responsive, static Vue website",
   "scripts": {
+    "admin": "node tools/admin/server.cjs",
+    "test:admin": "node --test tools/admin/admin.test.cjs",
     "dev": "node tools/serve.cjs",
     "preview": "node tools/serve.cjs",
     "check": "node tools/check-site.cjs",
