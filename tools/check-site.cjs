@@ -8,7 +8,7 @@ const figures=JSON.parse(read('assets/data/figure-sources.json'));
 const ids=new Set(),titles=new Set();
 const normalized=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
 let references=0;
-function asset(file){if(!file||/^(https?:|data:)/.test(file))return;assert.ok(fs.existsSync(path.join(root,decodeURIComponent(file))),`Missing asset: ${file}`);references++;}
+function asset(file){if(!file||/^(https?:|data:)/.test(file))return;assert.ok(fs.existsSync(path.join(root,decodeURIComponent(file.split(/[?#]/)[0]))),`Missing asset: ${file}`);references++;}
 function url(value){if(value)assert.ok(/^https?:\/\//.test(value),`Invalid URL: ${value}`);}
 for(const paper of papers){
  assert.ok(paper.title&&paper.authors&&paper.venue,`Incomplete paper: ${paper.id}`);

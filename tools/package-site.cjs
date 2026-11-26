@@ -1,6 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'.site-dist');
+require('./build-pages.cjs');
 // Only public site assets enter the deployment artifact; repository/cache files stay local.
 fs.mkdirSync(out,{recursive:true});
 const files=['index.html','People.html','Publication.html','Research.html','Openings.html','News.html','OtherStu.html','LICENSE.txt'];
