@@ -111,3 +111,8 @@ body[data-page=home] .hero{position:relative;display:flex;align-items:center;min
 .filter-select select:focus,.filter-select select:focus-visible,.student-year select:focus,.student-year select:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-color:var(--accent);box-shadow:none}
 
 :root[data-theme=dark] .footer-logo,:root[data-theme=dark] .site-loader-logo{filter:brightness(2)}
+
+.dialog-footer{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px 28px;font-size:13px;line-height:1.85}
+.dialog-credit{min-width:0;overflow-wrap:anywhere}
+.dialog-footer .dialog-source{display:inline-flex;justify-self:end;align-self:start;margin:0;white-space:nowrap;line-height:inherit;border-bottom:1px solid var(--line);padding-bottom:2px}
+@media(max-width:600px){.dialog-footer{grid-template-columns:minmax(0,1fr);gap:12px;font-size:12px}.dialog-footer .dialog-source{justify-self:start}}
