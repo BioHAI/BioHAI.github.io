@@ -672,5 +672,23 @@
     "interests": [],
     "image": "images/uploads/members/9b88c22e-cea4-4782-8a04-f0f269c0ce72.jpg",
     "thumbnail": "images/uploads/members/9b88c22e-cea4-4782-8a04-f0f269c0ce72-preview.webp"
+  },
+  {
+    "id": "member-3199d025-2729-4913-8ade-2dd535308da3",
+    "name": "谭罗达",
+    "role": "phd",
+    "email": "tld709@hnu.edu.cn",
+    "cohort": "2025",
+    "bio": "虚拟细胞&SBDD",
+    "english": "",
+    "rank": "",
+    "rankZh": "",
+    "url": "",
+    "scholar": "",
+    "website": "",
+    "alternateEmail": "",
+    "interests": [],
+    "image": "images/uploads/members/886f77bf-1db5-48c4-9b12-fcd4fa1f00ed.jpg",
+    "thumbnail": "images/uploads/members/886f77bf-1db5-48c4-9b12-fcd4fa1f00ed-preview.webp"
   }
 ]
