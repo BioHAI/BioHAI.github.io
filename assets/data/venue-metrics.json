@@ -1,0 +1,38 @@
+{
+  "checked": "2026-11-26",
+  "journals": [
+    {
+      "name": "Nature Machine Intelligence",
+      "value": 29.8,
+      "year": 2025,
+      "source": "https://www.nature.com/natmachintell/journal-impact"
+    },
+    {
+      "name": "Nature Communications",
+      "value": 18.1,
+      "year": 2025,
+      "source": "https://www.nature.com/ncomms/journal-impact"
+    },
+    {
+      "name": "Nature Protocols",
+      "value": 18.4,
+      "year": 2025,
+      "source": "https://www.nature.com/nprot/journal-impact"
+    }
+  ],
+  "ccf": {
+    "source": "https://www.ccf.org.cn/Academic_Evaluation/AI/",
+    "a": [
+      "AAAI",
+      "NeurIPS",
+      "ICML",
+      "IJCAI",
+      "CVPR",
+      "ACL"
+    ],
+    "b": [
+      "EMNLP"
+    ],
+    "kddSource": "https://www.ccf.org.cn/Academic_Evaluation/DM_CS/"
+  }
+}

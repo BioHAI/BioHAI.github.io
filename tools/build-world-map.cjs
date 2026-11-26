@@ -1,0 +1,10 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+if(!process.argv[2])throw Error('Pass the Natural Earth ne_110m_land.geojson path.');
+const land=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));
+const xy=([lon,lat])=>[(lon+180)*1000/360,(84-lat)*1000/360].map(n=>Number(n.toFixed(2)));
+const ring=points=>points.map((p,i)=>(i?'L':'M')+xy(p).join(',')).join('')+'Z';
+const paths=land.features.flatMap(f=>f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates]).map(p=>p.map(ring).join(''));
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" aria-labelledby="map-title"><title id="map-title">World land map</title><desc>Coastlines from Natural Earth 1:110m public-domain land data. No country boundaries or visitor data.</desc><defs><clipPath id="world-clip"><path d="M0 0H1000V400H0Z"/></clipPath></defs><g clip-path="url(#world-clip)" fill="#cfddf0" fill-rule="evenodd">${paths.map(d=>'<path d="'+d+'"/>').join('')}</g></svg>`;
+const out=path.resolve(__dirname,'../images/brand/world-land.svg');fs.writeFileSync(out,svg);
+console.log(`Created world map: ${paths.length} polygons, ${Buffer.byteLength(svg)} bytes.`);

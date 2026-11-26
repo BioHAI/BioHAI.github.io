@@ -1,0 +1,3 @@
+const cp=require('node:child_process'),path=require('node:path');
+const tasks=[['https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf','../../.research-cache/NotoSansSC-Variable.ttf'],['https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt','../assets/fonts/NotoSansSC-OFL.txt']];
+Promise.all(tasks.map(([url,file])=>new Promise(resolve=>cp.execFile('curl.exe',['--proxy','http://127.0.0.1:7897','-L','--fail','--max-time','60','-sS',url,'-o',path.resolve(__dirname,file)],{windowsHide:true},e=>{console.log(path.basename(file)+': '+(e?'unavailable':'ok'));resolve();}))));

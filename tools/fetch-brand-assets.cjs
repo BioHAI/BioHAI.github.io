@@ -1,0 +1,4 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const root=path.resolve(__dirname,'..');
+const resources=[['https://www.hnu.edu.cn/images/logo.png','images/brand/hnu-logo.png'],['https://www.hnu.edu.cn/images/foot-logo.png','images/brand/hnu-logo-footer.png'],['https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf','assets/fonts/Manrope-Variable.ttf'],['https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt','assets/fonts/Manrope-OFL.txt']];
+Promise.all(resources.map(([url,file])=>new Promise(resolve=>{const dest=path.join(root,file);fs.mkdirSync(path.dirname(dest),{recursive:true});cp.execFile('curl.exe',['--proxy','http://127.0.0.1:7897','-L','--fail','--max-time','40','-sS',url,'-o',dest],{windowsHide:true},e=>{console.log(file+': '+(e?'unavailable':'ok'));resolve();});})));

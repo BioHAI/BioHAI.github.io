@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "provider": "mapmyvisitors",
+  "siteHosts": [
+    "biohai.github.io"
+  ],
+  "widgetKey": "MpFrwzj80j01r5yityW5K8Lq-xIhT8xXKkpA34ZWeNs",
+  "statsUrl": ""
+}

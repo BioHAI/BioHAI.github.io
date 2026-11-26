@@ -1,0 +1,61 @@
+name: Sync research and publish website
+
+on:
+  schedule:
+    # 08:23 Asia/Shanghai. GitHub may delay scheduled jobs during busy periods.
+    - cron: '23 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: biohai-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Restore previous research data and figures
+        uses: actions/cache@v6
+        with:
+          path: .research-sync-cache
+          key: research-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: research-v1-
+      - name: Test the synchronization pipeline
+        run: npm run test:research
+      - name: Read the faculty publication list
+        run: npm run sync:research
+      - name: Validate website data and assets
+        run: npm run check
+      - name: Package public website assets
+        run: npm run build:site
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .site-dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy updated website without repository commits
+        id: deployment
+        uses: actions/deploy-pages@v4

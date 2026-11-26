@@ -1,0 +1,10 @@
+{
+  "source": "https://csee.hnu.edu.cn/people/zengxiangxiang",
+  "startYear": 2025,
+  "minimumSourceRecords": 20,
+  "maximumNewRecords": 30,
+  "aliases": {
+    "m2po": ["MPO: Multi-Perspective Multi-Pair Preference Optimization for Machine Translation"],
+    "kgexplainer": ["KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source": "https://csee.hnu.edu.cn/people/zengxiangxiang",
+  "checkedAt": "2026-11-26T07:27:22.592Z",
+  "sourceRecords": 54,
+  "recentRecords": 31,
+  "totalRecords": 50,
+  "added": [],
+  "enriched": [],
+  "withoutFigure": [
+    "piedg",
+    "visioned",
+    "sslreview"
+  ],
+  "warnings": [
+    "sslreview: Command failed: curl.exe --fail --location --silent --show-error --proto =https --proto-redir =https --connect-timeout 10 --max-time 30 --retry 1 --retry-delay 1 --max-filesize 12000000 --user-agent BioHAI-ResearchSync/1.0 (+https://biohai.github.io/) --write-out "
+  ]
+}

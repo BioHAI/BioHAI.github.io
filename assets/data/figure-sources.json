@@ -1,0 +1,254 @@
+{
+  "dynamicdna": {
+    "image": "images/research/dynamicdna.png",
+    "imageSource": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs42256-026-01249-1/MediaObjects/42256_2026_1249_Fig1_HTML.png",
+    "articleSource": "https://www.nature.com/articles/s42256-026-01249-1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "rareddie": {
+    "image": "images/research/rareddie.png",
+    "imageSource": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-025-59431-9/MediaObjects/41467_2025_59431_Fig1_HTML.png",
+    "articleSource": "https://www.nature.com/articles/s41467-025-59431-9",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "sketchmol": {
+    "image": "images/research/sketchmol.png",
+    "imageSource": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs42256-025-00982-3/MediaObjects/42256_2025_982_Fig1_HTML.png",
+    "articleSource": "https://www.nature.com/articles/s42256-025-00982-3",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "edbench": {
+    "image": "images/research/edbench.png",
+    "imageSource": "https://arxiv.org/html/2505.09262v2/imgs/Fig1_Intro.png",
+    "articleSource": "https://arxiv.org/html/2505.09262v2",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "opticaldna": {
+    "image": "images/research/opticaldna.png",
+    "imageSource": "https://arxiv.org/html/2602.02014v1/figures/VisionDNA-fig1-v12.png",
+    "articleSource": "https://arxiv.org/html/2602.02014v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "latentchem": {
+    "image": "images/research/latentchem.png",
+    "imageSource": "https://arxiv.org/html/2602.07075v1/figure1_final_cropped.png",
+    "articleSource": "https://arxiv.org/html/2602.07075v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "bindmol": {
+    "image": "images/research/bindmol.png",
+    "imageSource": "https://arxiv.org/html/2611.14956v1/GLP1.png",
+    "articleSource": "https://arxiv.org/html/2611.14956v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "captchamind": {
+    "image": "images/research/captchamind.png",
+    "imageSource": "https://arxiv.org/html/2605.19538v1/figure1.png",
+    "articleSource": "https://arxiv.org/html/2605.19538v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "agentfold": {
+    "image": "images/research/agentfold.png",
+    "imageSource": "https://arxiv.org/html/2608.26747v1/pictures/arch.png",
+    "articleSource": "https://arxiv.org/html/2608.26747v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "steph": {
+    "image": "images/research/steph.png",
+    "imageSource": "https://arxiv.org/html/2603.10526v1/fig1-current-paradigms.png",
+    "articleSource": "https://arxiv.org/html/2603.10526v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "surfflow": {
+    "image": "images/research/surfflow.png",
+    "imageSource": "https://arxiv.org/html/2601.04506v1/figure/Figure1-2.png",
+    "articleSource": "https://arxiv.org/html/2601.04506v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "surfdesign": {
+    "image": "images/research/surfdesign.png",
+    "imageSource": "https://arxiv.org/html/2606.07567v1/figure/Figure1_200.png",
+    "articleSource": "https://arxiv.org/html/2606.07567v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "chemdual": {
+    "image": "images/research/chemdual.png",
+    "imageSource": "https://arxiv.org/html/2505.02639v1/fig1.png",
+    "articleSource": "https://arxiv.org/html/2505.02639v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "apm": {
+    "image": "images/research/apm.png",
+    "imageSource": "https://arxiv.org/html/2504.13075v1/figures/illustration.png",
+    "articleSource": "https://arxiv.org/html/2504.13075v1",
+    "figure": "Figure 1",
+    "retrieved": "2026-11-26"
+  },
+  "bindingmodes": {
+    "image": "images/research/bindingmodes.png",
+    "imageSource": "https://assets-eu.researchsquare.com/files/rs-9511630/v1_covered_c7bec6f8-94f7-4c53-bb64-719d9847119e.pdf?c=1777539520",
+    "articleSource": "https://assets-eu.researchsquare.com/files/rs-9511630/v1_covered_c7bec6f8-94f7-4c53-bb64-719d9847119e.pdf?c=1777539520",
+    "figure": "Figure 1",
+    "pdfPage": 15,
+    "cropPoints": [
+      122,
+      80,
+      498,
+      450
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "safedrug": {
+    "image": "images/research/safedrug.png",
+    "imageSource": "https://loop113.github.io/safedrug-benchmark/static/SafeDrug_Paper.pdf",
+    "articleSource": "https://loop113.github.io/safedrug-benchmark/static/SafeDrug_Paper.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 3,
+    "cropPoints": [
+      105,
+      65,
+      508,
+      324
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "caml": {
+    "image": "images/research/caml.png",
+    "imageSource": "https://aclanthology.org/2026.acl-long.896.pdf",
+    "articleSource": "https://aclanthology.org/2026.acl-long.896.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 3,
+    "cropPoints": [
+      70,
+      56,
+      527,
+      235
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "m2po": {
+    "image": "images/research/m2po.png",
+    "imageSource": "https://aclanthology.org/2026.acl-long.469.pdf",
+    "articleSource": "https://aclanthology.org/2026.acl-long.469.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 1,
+    "cropPoints": [
+      306,
+      213,
+      527,
+      380
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "mamo": {
+    "image": "images/research/mamo.png",
+    "imageSource": "https://ojs.aaai.org/index.php/AAAI/article/download/40757/44718",
+    "articleSource": "https://ojs.aaai.org/index.php/AAAI/article/download/40757/44718",
+    "figure": "Figure 1",
+    "pdfPage": 1,
+    "cropPoints": [
+      319,
+      260,
+      560,
+      419
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "trace": {
+    "image": "images/research/trace.png",
+    "imageSource": "https://ojs.aaai.org/index.php/AAAI/article/download/36971/40933",
+    "articleSource": "https://ojs.aaai.org/index.php/AAAI/article/download/36971/40933",
+    "figure": "Figure 1",
+    "pdfPage": 1,
+    "cropPoints": [
+      319,
+      241,
+      560,
+      435
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "ppi": {
+    "image": "images/research/ppi.png",
+    "imageSource": "https://aclanthology.org/2025.acl-long.554.pdf",
+    "articleSource": "https://aclanthology.org/2025.acl-long.554.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 4,
+    "cropPoints": [
+      70,
+      55,
+      527,
+      351
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "edg": {
+    "image": "images/research/edg.png",
+    "imageSource": "https://www.ijcai.org/proceedings/2025/0872.pdf",
+    "articleSource": "https://www.ijcai.org/proceedings/2025/0872.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 2,
+    "cropPoints": [
+      51,
+      56,
+      564,
+      183
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "peptidereview": {
+    "image": "images/research/peptidereview.png",
+    "imageSource": "https://www.cs.newpaltz.edu/~lik/publications/Leshan-Lai-ACM-CSUR-2025.pdf",
+    "articleSource": "https://www.cs.newpaltz.edu/~lik/publications/Leshan-Lai-ACM-CSUR-2025.pdf",
+    "figure": "Figure 1",
+    "pdfPage": 4,
+    "cropPoints": [
+      45,
+      65,
+      450,
+      503
+    ],
+    "retrieved": "2026-11-26"
+  },
+  "laco": {
+    "image": "images/research/laco.png",
+    "imageSource": "https://raw.githubusercontent.com/xiaomingaaa/LaCo/master/method_git.png",
+    "articleSource": "https://github.com/xiaomingaaa/LaCo",
+    "figure": "Method overview",
+    "retrieved": "2026-11-26"
+  },
+  "kgexplainer": {
+    "image": "images/research/kgexplainer.jpg",
+    "imageSource": "https://raw.githubusercontent.com/xiaomingaaa/KGExplainer/master/intro.jpg",
+    "articleSource": "https://github.com/xiaomingaaa/KGExplainer",
+    "figure": "Method overview",
+    "retrieved": "2026-11-26"
+  },
+  "s2vm": {
+    "image": "images/research/s2vm.png",
+    "imageSource": "https://proceedings.neurips.cc/paper_files/paper/2025/file/c0ebffad509ae02bd60340690b1fdd5d-Paper-Conference.pdf",
+    "articleSource": "https://proceedings.neurips.cc/paper_files/paper/2025/file/c0ebffad509ae02bd60340690b1fdd5d-Paper-Conference.pdf",
+    "figure": "Figure 2",
+    "pdfPage": 4,
+    "cropPoints": [
+      106,
+      66,
+      506,
+      242
+    ],
+    "retrieved": "2026-11-26"
+  }
+}

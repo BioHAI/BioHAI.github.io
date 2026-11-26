@@ -1,0 +1,20 @@
+{
+  "name": "biohai-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI4Health at Hunan University — a responsive, static Vue website",
+  "scripts": {
+    "dev": "node tools/serve.cjs",
+    "preview": "node tools/serve.cjs",
+    "check": "node tools/check-site.cjs",
+    "build:pages": "node tools/build-pages.cjs",
+    "sync:research": "node tools/sync-research.cjs",
+    "sync:research:check": "node tools/sync-research.cjs --dry-run",
+    "research:watch": "node tools/watch-research.cjs",
+    "test:research": "node --test tools/research-sync/sync.test.cjs",
+    "build:site": "node tools/package-site.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
