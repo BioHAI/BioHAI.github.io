@@ -84,6 +84,26 @@
     "photoSource": "https://csee.hnu.edu.cn/Content/UploadFiles/ryjbxx/627568f9-21ac-44e5-aca3-2c88701fb1ef.png"
   },
   {
+    "name": "王烽傲",
+    "english": "Feng-ao Wang",
+    "email": "wangfengao21@mails.ucas.ac.cn",
+    "bio": "湖南大学人工智能交叉研究院助理教授、博士生导师，岳麓学者。2021 年本科毕业于西安交通大学软件工程专业，2026 年博士毕业于中国科学院大学。研究 AI for Science、虚拟细胞与具身智能，以第一或通讯作者在 Nature Communications、National Science Review、Genome Biology 等期刊发表论文。",
+    "image": "images/teacher/wangfengao-official.jpg",
+    "url": "https://csee.hnu.edu.cn/people/wangaofeng",
+    "role": "faculty",
+    "cohort": "",
+    "rank": "Assistant Professor",
+    "rankZh": "助理教授 · 博士生导师",
+    "interests": [
+      "AI for Science",
+      "虚拟细胞",
+      "具身智能"
+    ],
+    "source": "https://csee.hnu.edu.cn/people/wangaofeng",
+    "sourceChecked": "2026-11-26",
+    "photoSource": "https://csee.hnu.edu.cn/Content/UploadFiles/ryjbxx/a8f370e2-36f4-4502-ac2a-956fd5e8b113.jpg"
+  },
+  {
     "name": "史俊峰",
     "email": "jeff-shi@hnu.edu.cn",
     "bio": "湖南大学教授 · 芙蓉学者湖湘青年英才",

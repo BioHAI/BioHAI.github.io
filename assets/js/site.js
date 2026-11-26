@@ -68,7 +68,7 @@
     const [papers,members,news,lab]=await Promise.all([needPapers?loadJSON('publications.json'):[],needPeople?loadJSON('people.json'):[],needNews?loadJSON('legacy-news.json'):{},['research','openings'].includes(page)?loadJSON('lab-content.json'):{}]);
     const english={'曾湘祥':'Xiangxiang Zeng','宋勃升':'Bosheng Song','刘元盛':'Yuansheng Liu','刘益萍':'Yiping Liu'};
     const roleLabels={faculty:'Professor',visiting:'Visiting scholars',postdoc:'Postdoctoral researcher',phd:'PhD student',master:'Master’s student'};
-    members.forEach(p=>{p.english=english[p.name]||'';p.roleLabel=roleLabels[p.role];});
+    members.forEach(p=>{p.english=p.english||english[p.name]||'';p.roleLabel=roleLabels[p.role];});
     const nav=[['home','Home','index.html'],['people','People','People.html'],['news','News','News.html'],['publications','Publication','Publication.html'],['research','Research','Research.html'],['openings','Openings','Openings.html']];
     const titles={home:'',people:'People',publications:'Publications',news:'News',research:'Research',openings:'Openings',alumni:'Alumni'};
     document.title=(titles[page]?titles[page]+' · ':'')+'AI4Health @ Hunan University';

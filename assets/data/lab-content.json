@@ -106,6 +106,31 @@
       },
       "url": "https://csee.hnu.edu.cn/people/liuyiping",
       "image": "images/people/thumbs/member-004.webp"
+    },
+    {
+      "name": "王烽傲",
+      "slug": "wangfengao",
+      "rank": "Assistant Professor",
+      "rankZh": "助理教授 · 博士生导师",
+      "bio": "湖南大学人工智能交叉研究院助理教授、博士生导师，岳麓学者。2021 年本科毕业于西安交通大学软件工程专业，2026 年博士毕业于中国科学院大学。研究 AI for Science、虚拟细胞与具身智能，以第一或通讯作者在 Nature Communications、National Science Review、Genome Biology 等期刊发表论文。",
+      "interests": [
+        "AI for Science",
+        "虚拟细胞",
+        "具身智能"
+      ],
+      "recruitment": {
+        "year": "招生咨询",
+        "types": [],
+        "summary": "围绕 AI for Science、虚拟细胞与具身智能开展研究。",
+        "detail": "有意向的同学可通过邮件介绍研究兴趣、学习经历与相关实践，与导师进一步交流。",
+        "quota": "具体招生类型与名额请邮件咨询",
+        "email": "wangfengao21@mails.ucas.ac.cn"
+      },
+      "url": "https://csee.hnu.edu.cn/people/wangaofeng",
+      "image": "images/teacher/wangfengao-official.jpg",
+      "source": "https://csee.hnu.edu.cn/people/wangaofeng",
+      "sourceChecked": "2026-11-26",
+      "photoSource": "https://csee.hnu.edu.cn/Content/UploadFiles/ryjbxx/a8f370e2-36f4-4502-ac2a-956fd5e8b113.jpg"
     }
   ],
   "directions": [
