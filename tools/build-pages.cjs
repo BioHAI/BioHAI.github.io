@@ -14,6 +14,8 @@ for(const[file,page,title,description]of pages){fs.writeFileSync(path.join(root,
   <meta property="og:description" content="${description}">
   <title>${title}</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="images/brand/ai4health-logo.png" fetchpriority="high">
+${page==='home'?'  <link rel="preload" as="image" href="images/brand/slogan.png" fetchpriority="high">':''}
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/blue-refresh.css">
   <link rel="stylesheet" href="assets/css/visitor-map.css">

@@ -21,3 +21,10 @@
 @media(max-width:600px){.visitor-map-section{padding:30px 0}.visitor-map-inner{display:block}.visitor-map-heading{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:22px}.visitor-map-heading h2{font-size:26px}.visitor-map-heading>p{font-size:14px;margin:0}.visitor-map-heading .visitor-map-status{margin:0 0 0 auto;font-size:11px;padding:3px 7px}.visitor-map-heading .visitor-map-details{margin:0 0 0 auto;font-size:13px}.visitor-map-figure figcaption{font-size:11px;gap:6px}.visitor-map-lab-pin>span{font-size:10px;top:11px;right:-8px}.visitor-map-lab-pin>i{width:7px;height:7px;left:-3.5px;top:-3.5px;box-shadow:0 0 0 3px #235cb018}}
 @media(max-width:380px){.visitor-map-heading h2{font-size:24px}.visitor-map-heading .visitor-map-status{margin-left:0}.visitor-map-figure figcaption{display:block}.visitor-map-figure figcaption>span{display:flex;margin-top:4px}}
 @media(prefers-reduced-motion:reduce){.visitor-map-lab-pin>i:after{animation:none}}
+
+/* Request a full-resolution map in the site palette; keep a local silhouette while loading. */
+.visitor-map-canvas.is-live{aspect-ratio:auto;background:#f5f8fd}
+.visitor-map-live{position:relative;aspect-ratio:1200/612;height:auto;background:#f5f8fd url('../../images/brand/world-land.svg') center/100% auto no-repeat}
+.visitor-map-live img{position:relative;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .25s ease}
+.visitor-map-live.is-loaded img{opacity:1}
+@media(prefers-reduced-motion:reduce){.visitor-map-live img{transition:none}}
