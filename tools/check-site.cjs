@@ -23,7 +23,7 @@ for(const paper of papers){
 for(const person of people){assert.ok(person.name&&person.role);asset(person.image);asset(person.thumbnail);url(person.url);url(person.scholar);}
 for(const figure of Object.values(figures)){asset(figure.image);url(figure.imageSource);url(figure.articleSource);}
 const news=JSON.parse(read('assets/data/legacy-news.json'));
-for(const items of Object.values(news.rewardInformation))for(const item of items)asset(item.image_file);
+for(const items of Object.values(news.rewardInformation))for(const item of items){asset(item.image_file);asset(item.thumbnail);assert.ok(item.thumbnail&&item.thumbnail!==item.image_file&&item.thumbnailWidth>0&&item.thumbnailHeight>0,'Award card is missing its lightweight preview');}
 for(const file of ['index','People','Publication','News','Research','Openings','OtherStu']){
  const html=read(file+'.html');assert.ok(html.includes('width=device-width')&&!html.includes('user-scalable=no'));
  for(const m of html.matchAll(/(?:src|href)="((?:assets\/)[^"]+)"/g))asset(m[1]);

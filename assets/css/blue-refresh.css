@@ -98,3 +98,9 @@ body[data-page=home] .hero{position:relative;display:flex;align-items:center;min
 .paper-text-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:var(--soft);text-align:center;color:var(--accent)}
 .paper-text-cover .cover-venue{font-family:Manrope,'Noto Sans SC',sans-serif;font-size:24px;font-weight:750;line-height:1.4;max-width:90%}
 .paper-text-cover .cover-year{font-size:17px;color:var(--muted)}
+
+/* Award thumbnails load first; full scans open only when requested. */
+.news-image-button{position:relative;display:block;width:100%;padding:0;text-align:inherit;background:#fff;border:0;border-radius:0;cursor:zoom-in}
+.news-image-hint{position:absolute;right:12px;bottom:12px;padding:3px 9px;background:var(--paper);color:var(--accent);border:1px solid var(--line);font-size:14px;line-height:1.8;opacity:0;transition:opacity .15s ease;pointer-events:none}
+.news-image-button:hover .news-image-hint,.news-image-button:focus-visible .news-image-hint{opacity:1}
+@media(hover:none){.news-image-hint{opacity:1}}

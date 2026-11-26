@@ -60,47 +60,77 @@
     "2022": [
       {
         "image_file": "images/news/huojiang/2021_9_28.jpg",
-        "textdescription": "湖南省计算机学会科学技术奖(2022年)"
+        "textdescription": "湖南省计算机学会科学技术奖(2022年)",
+        "thumbnail": "images/news/award-previews/2022-01.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 710
       },
       {
         "image_file": "images/reward/2022_CSDN.jpg",
-        "textdescription": "DrugAI CSDN"
+        "textdescription": "DrugAI CSDN",
+        "thumbnail": "images/news/award-previews/2022-02.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 730
       },
       {
         "image_file": "images/reward/22_TencentCloud.jpg",
-        "textdescription": "DrugAI 腾讯云优秀年度作者"
+        "textdescription": "DrugAI 腾讯云优秀年度作者",
+        "thumbnail": "images/news/award-previews/2022-03.webp",
+        "thumbnailWidth": 960,
+        "thumbnailHeight": 680
       },
       {
         "image_file": "images/reward/22_zxx_compute.jpg",
-        "textdescription": "2022年中国智能计算科技创新人物"
+        "textdescription": "2022年中国智能计算科技创新人物",
+        "thumbnail": "images/news/award-previews/2022-04.webp",
+        "thumbnailWidth": 559,
+        "thumbnailHeight": 800
       }
     ],
     "2023": [
       {
         "image_file": "images/reward/23_HighlyCited.png",
-        "textdescription": "Highly Cited Researcher 2023"
+        "textdescription": "Highly Cited Researcher 2023",
+        "thumbnail": "images/news/award-previews/2023-01.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 707
       },
       {
         "image_file": "images/reward/23_competition.jpg",
-        "textdescription": "全国人工智能应用场景创新挑战赛 全国二等奖"
+        "textdescription": "全国人工智能应用场景创新挑战赛 全国二等奖",
+        "thumbnail": "images/news/award-previews/2023-02.webp",
+        "thumbnailWidth": 565,
+        "thumbnailHeight": 800
       },
       {
         "image_file": "images/reward/23_TeacherGuide.jpg",
-        "textdescription": "全国人工智能应用场景创新挑战赛 优秀指导老师"
+        "textdescription": "全国人工智能应用场景创新挑战赛 优秀指导老师",
+        "thumbnail": "images/news/award-previews/2023-03.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 690
       },
       {
         "image_file": "images/reward/23_TencentCloud.jpg",
-        "textdescription": "DrugAI 腾讯云2023年度优质共创者"
+        "textdescription": "DrugAI 腾讯云2023年度优质共创者",
+        "thumbnail": "images/news/award-previews/2023-04.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 727
       }
     ],
     "2024": [
       {
         "image_file": "images/reward/24ICIC BestPaper.jpg",
-        "textdescription": "2024ICIC Best Paper"
+        "textdescription": "2024ICIC Best Paper",
+        "thumbnail": "images/news/award-previews/2024-01.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 727
       },
       {
         "image_file": "images/reward/24_HighlyCited.png",
-        "textdescription": "Highly Cited Researcher 2024"
+        "textdescription": "Highly Cited Researcher 2024",
+        "thumbnail": "images/news/award-previews/2024-02.webp",
+        "thumbnailWidth": 1000,
+        "thumbnailHeight": 709
       }
     ]
   }
