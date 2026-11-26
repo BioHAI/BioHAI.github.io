@@ -1,6 +1,14 @@
 /* BioHAI / AI4Health. Vue is vendored locally; this site needs no build step. */
 (() => {
   'use strict';
+  function finishLoading(){
+    document.getElementById('app')?.setAttribute('aria-busy','false');
+    const loader=document.getElementById('site-loader');if(!loader)return;
+    loader.dataset.state='ready';loader.setAttribute('aria-hidden','true');
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){loader.remove();return;}
+    loader.addEventListener('transitionend',event=>{if(event.target===loader)loader.remove();});
+    setTimeout(()=>loader.remove(),350);
+  }
   const {createApp,computed,ref,watch,onMounted,onBeforeUnmount,nextTick}=Vue;
   const {ResearchPage,OpeningsPage}=window.BioHAILabPages;
   const icons={search:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>',grid:'<svg width="12" height="12" viewBox="0 0 18 18" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="11" y="2" width="5" height="5" rx="1"/><rect x="2" y="11" width="5" height="5" rx="1"/><rect x="11" y="11" width="5" height="5" rx="1"/></svg>',zoom:'<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg>'};
@@ -106,5 +114,5 @@
       <dialog ref="figureDialog" class="figure-dialog" aria-labelledby="figure-title" @click="onDialogClick" @close="activePaper=null"><template v-if="activePaper"><div class="dialog-header"><div><span class="eyebrow">{{activePaper.venue}} · {{activePaper.year}}</span><h2 id="figure-title">{{activePaper.title}}</h2></div><button class="dialog-close" @click="closePreview" aria-label="关闭主图预览">×</button></div><div class="dialog-image"><img :src="activePaper.image" :alt="activePaper.title+' — '+(activePaper.figure||'论文主图')"></div><div class="dialog-footer"><span>{{activePaper.figure||'Research figure'}} · {{activePaper.authors}}</span><a :href="activePaper.figureSource||activePaper.url||activePaper.source" v-bind="external">查看图像来源 ↗</a></div><p v-if="activePaper.quality" class="dialog-note"><a :href="activePaper.quality.source" v-bind="external">{{activePaper.quality.label}} · 指标与分类来源 ↗</a><br>{{activePaper.quality.note}}</p><p v-if="activePaper.note" class="dialog-note">{{activePaper.note}}</p></template></dialog>`});
     app.mount('#app');
   }
-  boot().catch(error=>{console.error('Site initialization failed:',error);document.querySelector('#app').innerHTML='<main class="error-panel"><h1>网站内容暂时无法加载</h1><p>请检查本地服务是否运行，然后刷新页面。</p><p><a href="index.html">重新打开首页 →</a></p></main>';});
+  boot().catch(error=>{console.error('Site initialization failed:',error);document.querySelector('#app').innerHTML='<main class="error-panel"><h1>网站内容暂时无法加载</h1><p>请稍后重试，或刷新页面。</p><p><a href="index.html">重新打开首页 →</a></p></main>';}).finally(finishLoading);
 })();

@@ -32,6 +32,7 @@ for(const file of ['index','People','Publication','News','Research','Openings','
  assert.ok(embeddedMap,'Missing embedded visitor map configuration');
  assert.deepEqual(JSON.parse(embeddedMap[1]),JSON.parse(read('assets/data/visitor-map.json')));
  assert.ok(html.includes('assets/css/blue-refresh.css')&&html.includes('assets/js/lab-pages.js'));
+ assert.ok(html.includes('assets/css/loading.css')&&html.includes('id="site-loader" role="status"')&&html.includes('id="app" aria-busy="true"'),'Missing initial loading screen');
 }
 for(const file of ['research','openings','otherstu'])assert.ok(read('assets/data/'+file+'.html').length>100);
 const lab=JSON.parse(read('assets/data/lab-content.json'));
