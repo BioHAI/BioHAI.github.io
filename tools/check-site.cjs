@@ -28,6 +28,9 @@ for(const file of ['index','People','Publication','News','Research','Openings','
  const html=read(file+'.html');assert.ok(html.includes('width=device-width')&&!html.includes('user-scalable=no'));
  for(const m of html.matchAll(/(?:src|href)="((?:assets\/)[^"]+)"/g))asset(m[1]);
  assert.ok(html.includes('assets/js/site.js')&&html.includes('assets/css/site.css'));
+ const embeddedMap=html.match(/id="visitor-map-config">([\s\S]*?)<\/script>/);
+ assert.ok(embeddedMap,'Missing embedded visitor map configuration');
+ assert.deepEqual(JSON.parse(embeddedMap[1]),JSON.parse(read('assets/data/visitor-map.json')));
  assert.ok(html.includes('assets/css/blue-refresh.css')&&html.includes('assets/js/lab-pages.js'));
 }
 for(const file of ['research','openings','otherstu'])assert.ok(read('assets/data/'+file+'.html').length>100);

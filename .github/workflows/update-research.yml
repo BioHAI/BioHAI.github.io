@@ -35,6 +35,8 @@ jobs:
           restore-keys: research-v1-
       - name: Test the synchronization pipeline
         run: npm run test:research
+      - name: Test visitor map loading and recovery
+        run: npm run test:visitors
       - name: Read the faculty publication list
         run: npm run sync:research
       - name: Validate website data and assets

@@ -12,7 +12,8 @@
     "sync:research:check": "node tools/sync-research.cjs --dry-run",
     "research:watch": "node tools/watch-research.cjs",
     "test:research": "node --test tools/research-sync/sync.test.cjs",
-    "build:site": "node tools/package-site.cjs"
+    "build:site": "node tools/package-site.cjs",
+    "test:visitors": "node --test tools/visitor-map.test.cjs"
   },
   "engines": {
     "node": ">=18"

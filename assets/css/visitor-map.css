@@ -23,8 +23,11 @@
 @media(prefers-reduced-motion:reduce){.visitor-map-lab-pin>i:after{animation:none}}
 
 /* Request a full-resolution map in the site palette; keep a local silhouette while loading. */
-.visitor-map-canvas.is-live{aspect-ratio:auto;background:#f5f8fd}
-.visitor-map-live{position:relative;aspect-ratio:1200/612;height:auto;background:#f5f8fd url('../../images/brand/world-land.svg') center/100% auto no-repeat}
+.visitor-map-canvas.is-live{aspect-ratio:var(--visitor-map-aspect,2.04);background:#f5f8fd}
+.visitor-map-live{position:absolute;inset:0;height:100%;background:#f5f8fd url('../../images/brand/world-land.svg') center/100% auto no-repeat}
 .visitor-map-live img{position:relative;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .25s ease}
 .visitor-map-live.is-loaded img{opacity:1}
 @media(prefers-reduced-motion:reduce){.visitor-map-live img{transition:none}}
+
+.visitor-map-load-status{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px}
+.visitor-map-retry{color:var(--accent);font:inherit;font-weight:650;padding:3px 8px;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
