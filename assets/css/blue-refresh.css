@@ -104,3 +104,6 @@ body[data-page=home] .hero{position:relative;display:flex;align-items:center;min
 .news-image-hint{position:absolute;right:12px;bottom:12px;padding:3px 9px;background:var(--paper);color:var(--accent);border:1px solid var(--line);font-size:14px;line-height:1.8;opacity:0;transition:opacity .15s ease;pointer-events:none}
 .news-image-button:hover .news-image-hint,.news-image-button:focus-visible .news-image-hint{opacity:1}
 @media(hover:none){.news-image-hint{opacity:1}}
+
+.dialog-close{display:grid;place-items:center;padding:0;line-height:1}
+.dialog-close svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;pointer-events:none}
