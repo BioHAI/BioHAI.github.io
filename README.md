@@ -70,6 +70,8 @@ GitHub 的计划任务可能延迟；公开仓库长期无活动时，GitHub 可
 
 所有页面的页脚前提供世界地图区域，组件为 `assets/js/visitor-map.js`，样式为 `assets/css/visitor-map.css`，配置为 `assets/data/visitor-map.json`。
 
+地图提供真实的放大、缩小和复位按钮，放大后可拖动查看。聚焦地图后支持加减键缩放、方向键平移和 Home 键复位。缩放范围为 100%–300%，复用当前访客分布图片，不重新请求统计图片；统计详情仍由标题旁的独立链接提供（如已配置）。
+
 已根据用户提供的 MapMyVisitors 嵌入代码填入真实的 `d` 标识，并将 `enabled` 设置为 `true`。仅在正式域名 `biohai.github.io` 加载统计地图；正式部署后启用线上统计。在 `localhost` / `127.0.0.1` 继续仅显示本地地图预览，不加载第三方统计请求、不计入访问量。预览标记点代表湖南大学所在地，不是访客。
 
 真实统计使用 [MapMyVisitors 官方图片嵌入](https://mapmyvisitors.com/learn/tools/add-visitor-map-html/)，复用用户脚本里的专属标识，采用官方支持的图片嵌入。以下是配置字段说明：

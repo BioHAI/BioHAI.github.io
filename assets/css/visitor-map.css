@@ -31,3 +31,21 @@
 
 .visitor-map-load-status{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px}
 .visitor-map-retry{color:var(--accent);font:inherit;font-weight:650;padding:3px 8px;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
+
+/* Local controls transform the existing image without issuing another tracking request. */
+.visitor-map-layer{position:absolute;inset:0;transform-origin:center;pointer-events:none}
+.visitor-map-layer>.visitor-map-base{display:block;width:100%;height:100%;object-fit:contain}
+.visitor-map-image-mask{position:absolute;left:0;bottom:0;width:var(--visitor-mask-width,36px);height:var(--visitor-mask-height,65px);background:#f5f8fd}
+.visitor-map-canvas{touch-action:pan-y;user-select:none}
+.visitor-map-canvas.is-zoomed{cursor:grab;touch-action:none}
+.visitor-map-canvas.is-dragging{cursor:grabbing}
+.visitor-map-canvas:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.visitor-map-controls{position:absolute;left:4px;bottom:4px;z-index:2;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper);box-shadow:0 1px 5px #17304f12;cursor:default}
+.visitor-map-controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:var(--paper);color:var(--ink);font:600 24px/1 Manrope,sans-serif;touch-action:manipulation;cursor:pointer}
+.visitor-map-controls button:last-child{border-bottom:0}
+.visitor-map-controls .visitor-map-reset{font:600 14px/1 'Noto Sans SC',sans-serif}
+.visitor-map-controls button:hover:enabled{background:var(--soft);color:var(--accent)}
+.visitor-map-controls button:disabled{opacity:.4;cursor:default}
+.visitor-map-controls button:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.visitor-map-zoom-status{position:absolute;right:10px;bottom:10px;padding:4px 8px;background:var(--paper);color:var(--ink);font-size:12px;line-height:1.6;pointer-events:none}
+@media(max-width:600px){.visitor-map-controls{flex-direction:row}.visitor-map-controls button{border-bottom:0;border-right:1px solid var(--line)}.visitor-map-controls button:last-child{border-right:0}}
