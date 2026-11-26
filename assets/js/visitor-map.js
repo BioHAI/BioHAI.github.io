@@ -76,8 +76,8 @@
           <template v-else><img class="visitor-map-base" src="images/brand/world-land.svg" width="1000" height="400" alt="世界陆地图，标记湖南大学所在地，不包含访客数据" draggable="false" loading="lazy"><span v-if="state.local" class="visitor-map-lab-pin" role="img" aria-label="课题组所在地：湖南大学，长沙"><i></i><span>湖南大学 · 长沙</span></span></template>
         </div>
         <div class="visitor-map-controls" role="group" aria-label="地图缩放">
-          <button type="button" aria-label="放大地图" title="放大地图" aria-controls="visitor-map-viewport" :disabled="!canZoom||zoom>=3" @click="zoomIn">＋</button>
-          <button type="button" aria-label="缩小地图" title="缩小地图" aria-controls="visitor-map-viewport" :disabled="!canZoom||zoom<=1" @click="zoomOut">−</button>
+          <button type="button" aria-label="放大地图" title="放大地图" aria-controls="visitor-map-viewport" :disabled="!canZoom||zoom>=3" @click="zoomIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg></button>
+          <button type="button" aria-label="缩小地图" title="缩小地图" aria-controls="visitor-map-viewport" :disabled="!canZoom||zoom<=1" @click="zoomOut"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
           <button type="button" class="visitor-map-reset" aria-label="复位地图" title="复位地图" aria-controls="visitor-map-viewport" :disabled="zoom===1" @click="resetView">复位</button>
         </div>
         <output v-if="zoom>1" class="visitor-map-zoom-status" aria-live="polite">{{Math.round(zoom*100)}}% · 拖动查看</output>
