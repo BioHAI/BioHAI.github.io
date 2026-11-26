@@ -54,6 +54,7 @@ const mapOptions=new URL(resolveVisitorMap(enabledMap,'biohai.github.io').imageU
 assert.equal(mapOptions.get('w'),'1200');
 assert.equal(mapOptions.get('co'),'f5f8fd');
 assert.equal(mapOptions.get('cl'),'cfddf0');
+assert.equal(new URL(resolveVisitorMap(enabledMap,'biohai.github.io',320).imageUrl).searchParams.get('w'),'320');
 assert.equal(resolveVisitorMap({...enabledMap,statsUrl:'javascript:alert(1)'},'biohai.github.io').statsUrl,'');
 console.log(`PASS: ${papers.length} unique publications, ${people.length} members, ${references} local asset references, 7 page entries, JavaScript syntax.`);
 console.log(`Research gallery: ${papers.length} papers, ${papers.filter(p=>p.image).length} real covers. Records awaiting a cover: ${papers.filter(p=>!p.image).map(p=>p.id).join(', ')}.`);
