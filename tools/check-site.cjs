@@ -39,7 +39,7 @@ const lab=JSON.parse(read('assets/data/lab-content.json'));
 assert.equal(new Set(lab.professors.map(p=>p.name)).size,lab.professors.length);
 for(const p of lab.professors){assert.ok(people.some(m=>m.name===p.name&&m.role==='faculty'));assert.ok(p.rank&&p.rankZh&&p.recruitment.email&&p.recruitment.summary);asset(p.image);url(p.url);}
 for(const project of lab.projects){assert.ok(project.title&&project.program&&project.period);assert.ok(lab.professors.some(p=>p.name===project.owner));url(project.source);}
-for(const file of ['images/brand/ai4health-logo.png','images/brand/slogan.png','images/brand/world-land.svg','assets/data/visitor-map.json','assets/fonts/Manrope-Variable.ttf','assets/fonts/Manrope-OFL.txt','assets/fonts/NotoSansSC-Site.woff2','assets/fonts/NotoSansSC-OFL.txt'])asset(file);
+for(const file of ['images/brand/ai4health-logo-transparent.png','images/brand/slogan.png','images/brand/world-land.svg','assets/data/visitor-map.json','assets/fonts/Manrope-Variable.ttf','assets/fonts/Manrope-OFL.txt','assets/fonts/NotoSansSC-Site.woff2','assets/fonts/NotoSansSC-OFL.txt'])asset(file);
 assert.ok(!read('assets/js/site.js').includes('/ RESEARCH FIGURE'));
 for(const file of ['assets/js/site.js','assets/js/lab-pages.js','assets/js/visitor-map.js','tools/build-world-map.cjs','tools/serve.cjs','tools/build-pages.cjs','tools/sync-research.cjs','tools/research-sync/parse.cjs','tools/research-sync/enrich.cjs','tools/watch-research.cjs','tools/package-site.cjs'])cp.execFileSync(process.execPath,['--check',path.join(root,file)],{stdio:'pipe'});
 const {resolveVisitorMap}=require('../assets/js/visitor-map.js');

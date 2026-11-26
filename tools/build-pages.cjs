@@ -17,7 +17,7 @@ for(const[file,page,title,description]of pages){fs.writeFileSync(path.join(root,
   <meta property="og:description" content="${description}">
   <title>${title}</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="images/brand/ai4health-logo.png" fetchpriority="high">
+  <link rel="preload" as="image" href="images/brand/ai4health-logo-transparent.png" fetchpriority="high">
   <link rel="preload" as="image" href="images/brand/world-land.svg">
   <script type="application/json" id="visitor-map-config">${mapConfig}</script>
 ${page==='home'?'  <link rel="preload" as="image" href="images/brand/slogan.png" fetchpriority="high">':''}
@@ -35,7 +35,7 @@ ${page==='people'?'  <link rel="stylesheet" href="'+versioned('assets/css/people
 <body data-page="${page}">
   <div class="site-loader" id="site-loader" role="status" aria-live="polite" aria-label="正在加载页面">
     <div class="site-loader-content">
-      <img class="site-loader-logo" src="images/brand/ai4health-logo.png" alt="AI4Health — Hunan University" width="1983" height="793" fetchpriority="high">
+      <img class="site-loader-logo" src="images/brand/ai4health-logo-transparent.png" alt="AI4Health — Hunan University" width="1983" height="793" fetchpriority="high">
       <svg class="site-loader-dna" viewBox="0 0 200 64" aria-hidden="true">
         <g><line style="--bond:0" x1="20" y1="18" x2="20" y2="46"/><line style="--bond:1" x1="40" y1="21" x2="40" y2="43"/><line style="--bond:2" x1="60" y1="32" x2="60" y2="32"/><line style="--bond:3" x1="80" y1="21" x2="80" y2="43"/><line style="--bond:4" x1="100" y1="18" x2="100" y2="46"/><line style="--bond:5" x1="120" y1="21" x2="120" y2="43"/><line style="--bond:6" x1="140" y1="32" x2="140" y2="32"/><line style="--bond:7" x1="160" y1="21" x2="160" y2="43"/><line style="--bond:8" x1="180" y1="18" x2="180" y2="46"/></g>
         <path class="strand-blue" d="M20 18C60 18 60 46 100 46S140 18 180 18"/>

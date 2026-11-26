@@ -2,7 +2,7 @@
 .site-loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;min-height:100vh;min-height:100dvh;background:var(--paper,#fff);color:var(--muted,#64758d);overflow:hidden;opacity:1;visibility:visible;transition:opacity .28s ease,visibility .28s ease}
 .site-loader::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 43%,#235cb008,transparent 62%);pointer-events:none}
 .site-loader-content{position:relative;display:flex;flex-direction:column;align-items:center;width:min(440px,calc(100% - 48px));text-align:center}
-.site-loader-logo{width:310px;max-width:100%;height:auto;aspect-ratio:1983/793;object-fit:contain;background:#fff}
+.site-loader-logo{width:310px;max-width:100%;height:auto;aspect-ratio:1983/793;object-fit:contain;background:transparent}
 .site-loader-dna{display:block;width:154px;height:50px;margin:24px 0 18px;overflow:visible}
 .site-loader-dna path{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:42 210;animation:loader-strand 2.2s linear infinite}
 .site-loader-dna .strand-blue{stroke:#235cb0}

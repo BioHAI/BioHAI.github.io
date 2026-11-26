@@ -39,6 +39,7 @@ npm run check
 - 封面来源：`assets/data/figure-sources.json`；记录原图地址、原文页面，PDF 提取图另含页码与裁剪区域。所有论文均显示在首页与 Publication；缺图记录使用期刊 / 会议与年份的文字封面，找到原始 Figure 1 后自动替换。
 - 静态页面标题、描述等入口模板：`tools/build-pages.cjs`。调整后运行 `npm run build:pages`；发布打包也会自动重建入口，为 CSS / JavaScript 附加内容版本号，避免浏览器缓存旧代码。
 - 初始化加载画面：`assets/css/loading.css` 与入口模板中的 `site-loader`。使用现有 Logo 和 SVG DNA 动画，页面初始化结束即淡出，不添加等待时长；初始化失败也会退出加载层，减少动态效果模式显示静态版本。
+- 导航、页脚和加载画面使用 `images/brand/ai4health-logo-transparent.png`（带透明通道的 PNG，并非 SVG）；原白底文件 `ai4health-logo.png` 保留作为源文件。
 - News 荣誉卡片使用 `images/news/award-previews/` 中的 WebP 预览，点击后才加载高清原图。新增荣誉后运行 `python tools/optimize-news-images.py` 生成预览（需要 Pillow），保留 `image_file` 原始文件路径。
 
 筛选条件保存在当前 URL，分享或刷新后可以恢复。主图使用原图比例完整显示；成员照片保持固定尺寸。手机端提供折叠导航、单列研究卡片和双列成员卡片。支持键盘操作、原生对话框焦点管理与减少动态效果偏好。
