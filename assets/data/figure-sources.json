@@ -250,5 +250,21 @@
       242
     ],
     "retrieved": "2026-11-26"
+  },
+  "piedg": {
+    "image": "images/research/piedg.jpg",
+    "imageSource": "https://biohai.github.io/images/research/piedg.jpg",
+    "articleSource": "https://biohai.github.io/images/research/piedg.jpg",
+    "figure": "研究主图",
+    "retrieved": "2026-11-27",
+    "sourceType": "lab-provided"
+  },
+  "visioned": {
+    "image": "images/research/visioned.png",
+    "imageSource": "https://biohai.github.io/images/research/visioned.png",
+    "articleSource": "https://biohai.github.io/images/research/visioned.png",
+    "figure": "研究主图",
+    "retrieved": "2026-11-27",
+    "sourceType": "lab-provided"
   }
 }

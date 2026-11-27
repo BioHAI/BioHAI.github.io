@@ -114,16 +114,16 @@
     "url": "",
     "topic": "Molecular learning",
     "authors": "Jiahang Shen, Hongxin Xiang, Zhixiang Cheng, Keke Chen, Yingzhuo Tu, Wenjie Du, Xiangxiang Zeng",
-    "image": "",
-    "imageSource": "",
-    "figure": "Research figure",
+    "image": "images/research/piedg.jpg",
+    "imageSource": "https://biohai.github.io/images/research/piedg.jpg",
+    "figure": "研究主图",
     "source": "https://csee.hnu.edu.cn/people/zengxiangxiang",
     "sourceChecked": "2026-11-26",
-    "figureSource": "",
+    "figureSource": "https://biohai.github.io/images/research/piedg.jpg",
     "verification": "faculty",
     "pdf": "",
     "code": "",
-    "note": "",
+    "note": "论文主图由课题组提供",
     "family": "Conferences",
     "quality": {
       "label": "CCF-A",
@@ -138,7 +138,8 @@
       "authors": "Jiahang Shen, Hongxin Xiang, Zhixiang Cheng, Keke Chen, Yingzhuo Tu, Wenjie Du, Xiangxiang Zeng",
       "venue": "NeurIPS",
       "year": 2026
-    }
+    },
+    "thumbnail": "images/research/thumbs/piedg.webp"
   },
   {
     "id": "bindmol",
@@ -218,16 +219,16 @@
     "url": "",
     "topic": "Molecular learning",
     "authors": "Zhixiang Cheng, Hongxin Xiang, Mingquan Liu, Tengfei Ma, Yingzhuo Tu, Wenjie Du, Bosheng Song, Yiping Liu, Xiangxiang Zeng",
-    "image": "",
-    "imageSource": "",
-    "figure": "Research figure",
+    "image": "images/research/visioned.png",
+    "imageSource": "https://biohai.github.io/images/research/visioned.png",
+    "figure": "研究主图",
     "source": "https://csee.hnu.edu.cn/people/zengxiangxiang",
     "sourceChecked": "2026-11-26",
-    "figureSource": "",
+    "figureSource": "https://biohai.github.io/images/research/visioned.png",
     "verification": "faculty",
     "pdf": "",
     "code": "",
-    "note": "",
+    "note": "论文主图由课题组提供",
     "family": "Conferences",
     "quality": {
       "label": "CCF-A",
@@ -242,7 +243,8 @@
       "authors": "Zhixiang Cheng, Hongxin Xiang, Mingquan Liu, Tengfei Ma, Yingzhuo Tu, Wenjie Du, Bosheng Song, Yiping Liu, Xiangxiang Zeng",
       "venue": "ICML",
       "year": 2026
-    }
+    },
+    "thumbnail": "images/research/thumbs/visioned.webp"
   },
   {
     "id": "latentchem",
