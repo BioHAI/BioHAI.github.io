@@ -11,6 +11,11 @@
 .professor-identity{min-width:0}
 .professor-identity .role-label{overflow-wrap:normal;word-break:normal}
 .professor-identity .english-name{margin-top:10px}
+/* Give visiting scholars, postdocs and students more visible portraits. */
+.member-card .member-photo{width:100px;height:126px;flex:0 0 100px;max-width:100%}
+.member-card .member-top{gap:18px}
+.member-card .member-top>div{min-width:0;flex:1}
+.member-card .role-label{display:block;line-height:1.6}
 .student-jump{margin-left:auto;font-size:14px;font-weight:650;color:var(--accent)}
 .people-toolbar .filter-top{margin-bottom:18px}
 .student-directory{border-top:1px solid var(--line);padding-top:28px;scroll-margin-top:110px}
@@ -37,6 +42,7 @@
 @media(max-width:1200px){.student-heading{flex-basis:100%}.student-filter-panel{flex-basis:100%}}
 @media(max-width:950px){.faculty-grid{grid-template-columns:1fr}.faculty-card{grid-template-columns:120px minmax(0,1fr);gap:22px}.faculty-photo{width:120px;height:156px}}
 @media(max-width:600px){
+ .member-card .member-photo{width:94px;height:119px;flex-basis:94px;margin-bottom:12px}
  .faculty-card{grid-template-columns:100px minmax(0,1fr);gap:18px}.faculty-photo{width:100px;height:133px}
  .student-jump{flex-basis:100%;margin:3px 0 0;font-size:13px}
  .student-directory{padding-top:24px;scroll-margin-top:95px}
