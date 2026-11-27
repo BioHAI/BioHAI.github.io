@@ -24,8 +24,28 @@ createApp({setup(){
  function discard(){if(!mayDiscard())return;const item=collection.value.find(p=>p.editorKey===editor.value?.key);if(item)choose(item,true);else editor.value=null;}
  async function save(withPreview){if(!editor.value||operation.value||uploading.value)return;if(!form.value.reportValidity())return;operation.value=true;error.value='';try{const e=editor.value,record=JSON.parse(JSON.stringify(e.record));record.interests=e.interestsText.split(/[,，、;；\n]/).map(t=>t.trim()).filter(Boolean);record.quality=e.qualityKind==='none'?null:{...e.metric,kind:e.qualityKind};const result=await api('/save',{kind:kind.value,key:e.key,record,revision:e.revision});Object.assign(state,result);choose(collection.value.find(p=>p.editorKey===result.savedKey),true);notify('已保存到本地，并自动备份');try{await load();}catch{}if(withPreview)openPreview(true);}catch(e){error.value=e.message;}finally{operation.value=false;}}
  async function fileBase64(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(String(r.result).split(',')[1]);r.onerror=()=>reject(Error('图片读取失败'));r.readAsDataURL(file);});}
- async function upload(event){const file=event.target.files?.[0];if(!file||!editor.value)return;if(file.size>15*1024*1024){error.value='原图最大 15 MB，请先缩小图片后上传';event.target.value='';return;}uploading.value=true;error.value='';let bitmap;try{bitmap=await createImageBitmap(file);if(bitmap.width*bitmap.height>160000000)throw Error('图片尺寸过大，请先缩小后上传');const bounds=kind.value==='members'?[360,450]:[1000,800],ratio=Math.min(1,bounds[0]/bitmap.width,bounds[1]/bitmap.height),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(bitmap.width*ratio));canvas.height=Math.max(1,Math.round(bitmap.height*ratio));canvas.getContext('2d').drawImage(bitmap,0,0,canvas.width,canvas.height);const thumbnail=await new Promise(resolve=>canvas.toBlob(resolve,'image/webp',.86));if(!thumbnail)throw Error('无法生成预览图，请换一张图片');const [original,small]=await Promise.all([fileBase64(file),fileBase64(thumbnail)]);const uploaded=await api('/upload',{kind:kind.value,original,thumbnail:small,width:canvas.width,height:canvas.height});editor.value.record.image=uploaded.image;editor.value.record.thumbnail='';editor.value.previewUrl=uploaded.previewUrl;notify('图片已准备好，保存后即可出现在网站中');}catch(e){error.value=e.message||'图片处理失败，请选择 JPG、PNG 或 WebP 图片';}finally{bitmap?.close();uploading.value=false;event.target.value='';}}
- function clearImage(){editor.value.record.image='';editor.value.record.thumbnail='';editor.value.previewUrl='';}
+ async function upload(event){
+  const file=event.target.files?.[0];if(!file||!editor.value)return;
+  const portrait=kind.value==='members',limit=(portrait?50:15)*1024*1024;
+  if(file.size>limit){error.value=portrait?'照片最大 50 MB，请选择较小的文件':'原图最大 15 MB，请先缩小图片后上传';event.target.value='';return;}
+  uploading.value=true;error.value='';let bitmap;
+  try{
+   if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('请选择 JPG、PNG 或 WebP 图片');
+   bitmap=await createImageBitmap(file);if(bitmap.width*bitmap.height>80000000)throw Error('图片超过 8000 万像素，请先缩小后上传');
+   const {PROFILES,compressBitmap,formatBytes}=BioHAIImageCompression;
+   const optimized=portrait?await compressBitmap(bitmap,PROFILES.portrait):null;
+   const alreadySmall=portrait&&file.size<=PROFILES.portrait.targetBytes&&file.size<optimized.blob.size&&bitmap.width<=PROFILES.portrait.maxWidth&&bitmap.height<=PROFILES.portrait.maxHeight;
+   const websitePhoto=alreadySmall?file:optimized?.blob||file;
+   const preview=await compressBitmap(bitmap,portrait?PROFILES.portraitPreview:PROFILES.figurePreview);
+   const [original,small]=await Promise.all([fileBase64(websitePhoto),fileBase64(preview.blob)]);
+   const uploaded=await api('/upload',{kind:kind.value,original,thumbnail:small,width:preview.width,height:preview.height});
+   editor.value.record.image=uploaded.image;editor.value.record.thumbnail='';editor.value.previewUrl=uploaded.previewUrl;
+   editor.value.uploadInfo=portrait?'照片已优化：'+formatBytes(file.size)+' → '+formatBytes(websitePhoto.size)+'；列表预览 '+formatBytes(preview.blob.size):'预览图已优化：'+formatBytes(preview.blob.size);
+   notify('图片已准备好，保存后即可出现在网站中');
+  }catch(e){error.value=e.message||'图片处理失败，请选择 JPG、PNG 或 WebP 图片';}
+  finally{bitmap?.close();uploading.value=false;event.target.value='';}
+ }
+ function clearImage(){if(uploading.value)return;editor.value.record.image='';editor.value.record.thumbnail='';editor.value.previewUrl='';editor.value.uploadInfo='';}
  function openPreview(saved=false){if(dirty.value&&!saved){error.value='表单有未保存修改，请点击“保存并预览”查看最新内容';return;}let url='/preview/index.html';const r=editor.value?.record;if(kind.value==='members')url='/preview/People.html'+(r?.name?'?q='+encodeURIComponent(r.name):'');if(kind.value==='papers')url='/preview/index.html'+(r?.title?'?q='+encodeURIComponent(r.title):'')+'#latest-research';if(kind.value==='awards')url='/preview/News.html?tab=awards';previewUrl.value=url;showPreview.value=true;}
  function openSettings(){proxy.value=state.settings?.proxy||'';showSettings.value=true;}
  async function saveSettings(){operation.value=true;error.value='';try{state.settings=await api('/settings',{proxy:proxy.value});showSettings.value=false;notify('连接设置已保存在本机');}catch(e){error.value=e.message;showSettings.value=false;}finally{operation.value=false;}}

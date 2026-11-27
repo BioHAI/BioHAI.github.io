@@ -20,3 +20,5 @@ label>input:not([type=checkbox]):not([type=file]),label>select,label>textarea{di
 fieldset.editor-scroll{border:0;margin:0;min-width:0}
 
 .mobile-settings{display:none}@media(max-width:850px){.mobile-settings{display:block}}
+
+.image-editor .upload-result{font-size:12px;color:var(--green);max-width:310px;overflow-wrap:anywhere}

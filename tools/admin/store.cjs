@@ -19,7 +19,8 @@ class ContentStore{
  stageUpload(kind,original,thumbnail,width,height){
   if(!['members','papers','awards'].includes(kind))throw new UserError('上传类别不正确');
   function decode(value,limit){if(typeof value!=='string'||!/^[A-Za-z0-9+/]*={0,2}$/.test(value)||value.length%4)throw new UserError('图片编码不正确');const b=Buffer.from(value,'base64');if(!b.length||b.length>limit)throw new UserError('图片文件过大');return b;}
-  const raw=decode(original,15*1024*1024),small=decode(thumbnail,4*1024*1024);
+  if(kind==='members'&&(typeof original!=='string'||original.length>Math.ceil(256*1024/3)*4))throw new UserError('照片尚未压缩，请刷新管理界面后重新上传');
+  const raw=decode(original,kind==='members'?256*1024:15*1024*1024),small=decode(thumbnail,kind==='members'?64*1024:4*1024*1024);
   function format(b){if(b.length>24&&b.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))return'png';if(b.length>4&&b[0]===255&&b[1]===216&&b[2]===255)return'jpg';if(b.length>16&&b.toString('ascii',0,4)==='RIFF'&&b.toString('ascii',8,12)==='WEBP')return'webp';throw new UserError('仅支持 JPG、PNG 和 WebP 图片');}
   const ext=format(raw),previewExt=format(small);
   if(!Number.isInteger(width)||!Number.isInteger(height)||width<1||height<1||width>1200||height>1200)throw new UserError('预览图尺寸不正确');

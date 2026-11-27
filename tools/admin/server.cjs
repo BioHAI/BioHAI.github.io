@@ -43,7 +43,7 @@ function createAdmin(options={}){
     res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'");
     res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});return res.end(fs.readFileSync(path.join(appDirectory,'index.html'),'utf8').replace('__ADMIN_TOKEN__',token));
    }
-   if(/^\/admin\/(app\.js|style\.css)$/.test(route))return sendFile(path.join(appDirectory,path.basename(route)),res,req.method);
+   if(/^\/admin\/(app\.js|image-compression\.js|style\.css)$/.test(route))return sendFile(path.join(appDirectory,path.basename(route)),res,req.method);
    if(route==='/vendor/vue.js')return sendFile(path.join(root,'assets/js/vendor/vue.global.prod.js'),res,req.method);
    if(route.startsWith('/preview/')){
     let relative;try{relative=decodeURIComponent(route.slice(9));}catch{throw new UserError('地址格式不正确');}

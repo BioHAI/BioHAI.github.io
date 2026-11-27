@@ -2,6 +2,26 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const {ContentStore}=require('./store.cjs'),{Publisher}=require('./publish.cjs'),{createAdmin}=require('./server.cjs');
 const PNG=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jrM8AAAAASUVORK5CYII=','base64');
+const {fit,encodeToBudget,PROFILES}=require('./ui/image-compression.js');
+test('Photo encoding falls back to JPEG when WebP export is unavailable',async t=>{
+ const previous=global.document,requests=[],fills=[];
+ t.after(()=>{if(previous===undefined)delete global.document;else global.document=previous;});
+ const canvas={width:0,height:0,getContext:()=>({drawImage(){},fillRect(){fills.push('white');}}),toBlob(callback,mime){requests.push(mime);callback(new Blob([new Uint8Array(100)],{type:mime==='image/webp'?'image/png':mime}));}};
+ global.document={createElement:()=>canvas};
+ const result=await require('./ui/image-compression.js').compressBitmap({width:120,height:180},PROFILES.portrait);
+ assert.equal(result.blob.type,'image/jpeg');assert.deepEqual(requests,['image/webp','image/jpeg']);assert.equal(fills.length,1);assert.equal(result.width,120);assert.equal(result.height,180);assert.equal(canvas.width,1);
+});
+test('Photo sizing preserves aspect ratio, never upscales and enforces size budgets',async()=>{
+ assert.deepEqual(fit(4000,6000,960,1200),{width:800,height:1200});
+ assert.deepEqual(fit(200,300,960,1200),{width:200,height:300});
+ assert.throws(()=>fit(0,10,960,1200),/尺寸/);
+ const photo=await encodeToBudget(4000,6000,PROFILES.portrait,async(w,h,q)=>({size:Math.round(w*h*q*.24)}));
+ assert.ok(photo.blob.size<=PROFILES.portrait.targetBytes);assert.equal(photo.width,800);assert.ok(photo.quality>=.72&&photo.quality<.9);
+ const noisy=await encodeToBudget(4000,6000,PROFILES.portrait,async(w,h,q)=>({size:Math.round(w*h*q)}));
+ assert.ok(noisy.blob.size<=PROFILES.portrait.targetBytes);assert.ok(noisy.height<1200);assert.ok(Math.abs(noisy.width/noisy.height-2/3)<.01);
+ await assert.rejects(encodeToBudget(100,100,PROFILES.portrait,async()=>null),/无法生成/);
+ await assert.rejects(encodeToBudget(100,100,PROFILES.portrait,async()=>({size:1024*1024})),/目标体积/);
+});
 function fixture(t){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'biohai-admin-test-'));t.after(()=>{assert.equal(path.dirname(root),fs.realpathSync(os.tmpdir()));assert.match(path.basename(root),/^biohai-admin-test-[a-zA-Z0-9]+$/);fs.rmSync(root,{recursive:true,force:true});});
  const write=(f,v)=>{const full=path.join(root,f);fs.mkdirSync(path.dirname(full),{recursive:true});fs.writeFileSync(full,typeof v==='object'&&!Buffer.isBuffer(v)?JSON.stringify(v,null,2)+'\n':v);};
@@ -23,6 +43,8 @@ test('Uploads stay private until a valid record is saved; PNG previews support b
  const f=fixture(t),u=f.store.stageUpload('members',PNG.toString('base64'),PNG.toString('base64'),1,1);assert.equal(fs.existsSync(path.join(f.root,'images/uploads')),false);
  const v=f.store.view();const result=f.store.save('members','',{name:'新同学',email:'student@hnu.edu.cn',role:'phd',cohort:'2024',image:u.image},v.revision),p=result.members.find(p=>p.name==='新同学');assert.match(p.image,/^images\/uploads\/members\/.+\.png$/);assert.ok(fs.existsSync(path.join(f.root,p.thumbnail)));assert.equal(p.cohort,'2024');
  assert.throws(()=>f.store.stageUpload('members',Buffer.from('<svg onload="evil()">').toString('base64'),PNG.toString('base64'),1,1),/JPG/);
+ assert.throws(()=>f.store.stageUpload('members',Buffer.alloc(300*1024).toString('base64'),PNG.toString('base64'),1,1),/尚未压缩/);
+ assert.throws(()=>f.store.stageUpload('members',PNG.toString('base64'),Buffer.alloc(70*1024).toString('base64'),1,1),/过大/);
 });
 test('Validation and revision checks prevent conflicting or unsafe edits without changing saved data',t=>{
  const f=fixture(t),v=f.store.view(),before=fs.readFileSync(path.join(f.root,'assets/data/people.json'),'utf8');
