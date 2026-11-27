@@ -120,10 +120,11 @@
     "2024": [
       {
         "image_file": "images/reward/24ICIC BestPaper.jpg",
-        "textdescription": "2024ICIC Best Paper",
+        "textdescription": "2024 ICIC Best Paper",
         "thumbnail": "images/news/award-previews/2024-01.webp",
         "thumbnailWidth": 1000,
-        "thumbnailHeight": 727
+        "thumbnailHeight": 727,
+        "id": "award-caabd60a-8c75-4d26-90a6-d99cb291d027"
       },
       {
         "image_file": "images/reward/24_HighlyCited.png",

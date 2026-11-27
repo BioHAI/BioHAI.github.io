@@ -83,7 +83,7 @@
     "imageSource": "https://loop113.github.io/safedrug-benchmark/static/SafeDrug_Paper.pdf",
     "figure": "Figure 1",
     "source": "https://csee.hnu.edu.cn/people/zengxiangxiang",
-    "sourceChecked": "2026-11-26",
+    "sourceChecked": "2026-11-27",
     "figureSource": "https://loop113.github.io/safedrug-benchmark/static/SafeDrug_Paper.pdf",
     "verification": "primary",
     "pdf": "",
@@ -92,9 +92,9 @@
     "family": "Conferences",
     "thumbnail": "images/research/thumbs/safedrug.webp",
     "quality": {
-      "label": "CCF-A",
       "kind": "ccf",
       "grade": "A",
+      "label": "CCF-A",
       "source": "https://www.ccf.org.cn/Academic_Evaluation/AI/",
       "note": "依据 CCF 人工智能类推荐目录核对；未在目录中定位的会议不添加分类。"
     },
