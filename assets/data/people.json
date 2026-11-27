@@ -193,13 +193,20 @@
   {
     "name": "杨喜喜",
     "email": "yangxixi@hnu.edu.cn",
-    "bio": "德睿智药实习",
+    "bio": "德睿智药实习、湘潭大学工作",
     "image": "images/people/yangxixi.jpg",
     "url": "",
     "scholar": "https://scholar.google.com/citations?hl=en&user=tOmyVSoAAAAJ",
     "role": "phd",
     "cohort": "2020",
-    "thumbnail": "images/people/thumbs/member-012.webp"
+    "thumbnail": "images/people/thumbs/member-012.webp",
+    "id": "member-6d084bba-d438-4879-b04b-89fcf518a237",
+    "english": "",
+    "rank": "",
+    "rankZh": "",
+    "website": "",
+    "alternateEmail": "",
+    "interests": []
   },
   {
     "name": "向鸿鑫",
