@@ -718,5 +718,23 @@
     "interests": [],
     "image": "images/uploads/members/886f77bf-1db5-48c4-9b12-fcd4fa1f00ed.jpg",
     "thumbnail": "images/uploads/members/886f77bf-1db5-48c4-9b12-fcd4fa1f00ed-preview.webp"
+  },
+  {
+    "id": "member-849989ad-34d5-4be5-8210-6225e074a645",
+    "name": "任忠豪",
+    "role": "phd",
+    "email": "zhonghaoren@hnu.edu.cn",
+    "cohort": "2023",
+    "bio": "Drug Discovery; Knowledge Graph Neural Network; Single Cell; AI4Science",
+    "english": "",
+    "rank": "",
+    "rankZh": "",
+    "url": "",
+    "scholar": "",
+    "website": "",
+    "alternateEmail": "",
+    "interests": [],
+    "image": "images/uploads/members/9f1539f4-a535-4b4a-99f5-af41daf19c41.jpg",
+    "thumbnail": "images/uploads/members/9f1539f4-a535-4b4a-99f5-af41daf19c41-preview.webp"
   }
 ]
